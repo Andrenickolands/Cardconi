@@ -1,0 +1,7 @@
+{
+  "name": "cardconi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
