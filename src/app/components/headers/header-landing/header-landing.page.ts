@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-headers',
-  templateUrl: './headers.page.html',
-  styleUrls: ['./headers.page.scss'],
+  selector: 'app-header-landing',
+  templateUrl: './header-landing.page.html',
+  styleUrls: ['./header-landing.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class HeadersPage implements OnInit {
+export class HeaderLandingPage implements OnInit {
 
   constructor() { }
 

@@ -161,4 +161,12 @@ export const routes: Routes = [
     path: 'input-checkbox',
     loadComponent: () => import('./components/inputs/input-checkbox/input-checkbox.page').then( m => m.InputCheckboxPage)
   },
+  {
+    path: 'header-landing',
+    loadComponent: () => import('./components/headers/header-landing/header-landing.page').then( m => m.HeaderLandingPage)
+  },
+  {
+    path: 'footer-landing',
+    loadComponent: () => import('./components/footers/footer-landing/footer-landing.page').then( m => m.FooterLandingPage)
+  },
 ];
