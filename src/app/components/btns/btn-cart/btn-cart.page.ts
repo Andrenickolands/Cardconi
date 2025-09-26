@@ -4,15 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-btn-floating',
-  templateUrl: './btn-floating.page.html',
-  styleUrls: ['./btn-floating.page.scss'],
+  selector: 'app-btn-cart',
+  templateUrl: './btn-cart.page.html',
+  styleUrls: ['./btn-cart.page.scss'],
   standalone: true,
-  imports: [IonButton, CommonModule, FormsModule]
+  imports: [IonButton,  CommonModule, FormsModule]
 })
-export class BtnFloatingPage implements OnInit {
+export class BtnCartPage implements OnInit {
 
-  @Input() text: string = 'Hola, un gusto atenderte'; 
+  @Input() textoBtn: string = 'Agregar al carrito'; 
+  @Input() counter: string = '1'; 
 
   constructor() { }
 

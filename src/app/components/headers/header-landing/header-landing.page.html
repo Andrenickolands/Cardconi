@@ -1,10 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header class="header">
+  <ion-toolbar class="toolbar-custom">
     <ion-title>header-landing</ion-title>
     <nav>
-      <div class="logo-header">
-        <img src="logo.png" alt="logo cardconi">
+      <div class="logo-info-container">
+        <div class="app-icon-header">
+          <img src="assets/images/Logo.png" alt="Logo cardconi" class="logo-imagen">
+        </div>
+
+        <div class="info-container">
+          <div class="nombre-app">{{ nombreApp }}</div>
+          <div class="ubicacion">
+            <ion-icon name="location-outline" class="icono-ubicacion"></ion-icon>
+            <span>{{ ubicacion }}</span>
+          </div>
+        </div>
       </div>
+
       <ul class="nav-menu" id="navMenu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Tarjetas</a></li>
@@ -24,7 +35,30 @@
         </button>
       </div>
 
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div slot="end" class="seccion-derecha">
+        <!-- Botón de perfil con avatar -->
+        <ion-button *ngIf="mostrarPerfil" fill="clear" class="boton-perfil" (click)="irAPerfil()">
+          <div class="avatar-usuario">
+            <span class="iniciales">{{ getIniciales() }}</span>
+          </div>
+
+          <div class="info-usuario">
+            <span class="nombre-usuario">{{ getNombreCompleto() }}</span>
+            <ion-icon name="chevron-down-outline" class="icono-dropdown"></ion-icon>
+          </div>
+        </ion-button>
+      </div>
+
+      <div slot="start" class="seccion-izquierda">
+        <ion-button fill="clear" class="boton-hamburguesa" (click)="abrirMenu()">
+          <ion-icon name="menu" slot="icon-only"></ion-icon>
+        </ion-button>
+
+        <!-- Botón hamburguesa TEMPORAL -->
+        <ion-button fill="clear" (click)="abrirMenu()" style="color: white;">
+          <ion-icon name="menu" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
     </nav>
   </ion-toolbar>
 </ion-header>

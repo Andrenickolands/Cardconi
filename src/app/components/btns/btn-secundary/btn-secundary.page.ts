@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-btn-secundary',
   templateUrl: './btn-secundary.page.html',
   styleUrls: ['./btn-secundary.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonButton,  CommonModule, FormsModule]
 })
 export class BtnSecundaryPage implements OnInit {
+
+  @Input() textoBtn: string = 'Ver más productos'; 
 
   constructor() { }
 

@@ -1,25 +1,11 @@
-.container-btn-primary {
-  width: 312px;
-  height: 40px;
-  max-width: 312px;
-  min-width: 180px;
+.container-btn-cart {
+  width: 80px;
+  height: 46px;
   flex-shrink: 0;
 }
 
-.btn-primary {
-  color: #2f2f2f;
-  text-align: center;
-  font-family: "Markazi Text";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 10px;
+.btn-cart {
+  border-radius: 14px;
   border: 1.699px solid rgba(232, 232, 232, 0.4);
   background: linear-gradient(
     110deg,
@@ -28,36 +14,36 @@
   );
   box-shadow: 22.97px 22.97px 33.981px 0 rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(25.486021041870117px);
-
-  z-index: 2;
 }
 
-.btn-primary-background {
-  width: 272px;
-  height: 32px;
+.btn-cart:active {
+  border-radius: 12px;
+  background: radial-gradient(
+    77.98% 110.3% at 17.62% 34.98%,
+    rgba(250, 235, 215, 0.4) 0%,
+    rgba(148, 139, 127, 0.4) 100%
+  );
+}
+
+.number-cart::before {
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 
+  fill: #FBD297;
+
   display: flex;
-  justify-content: top;
   align-items: center;
+  justify-content: center;
 
-  border-radius: 10px;
-  background: #e2e2e2;
-  filter: blur(2px);
-  
-  z-index: 1;
-}
-
-.btn-primary-background:hover {
-  border-radius: 10px;
-  background: #ffc165;
-  filter: blur(2px);
-}
-
-.btn-primary-background:active {
-  border-radius: 10px;
-  background: #ffcb53;
-  filter: blur(2px);
+  color: #2f2f2f;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.56px;
 }
 
 /* Pantallas ultra anchas (1601px+) */

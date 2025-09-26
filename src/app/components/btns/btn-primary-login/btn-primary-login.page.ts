@@ -4,15 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-btn-floating',
-  templateUrl: './btn-floating.page.html',
-  styleUrls: ['./btn-floating.page.scss'],
+  selector: 'app-btn-primary-login',
+  templateUrl: './btn-primary-login.page.html',
+  styleUrls: ['./btn-primary-login.page.scss'],
   standalone: true,
   imports: [IonButton, CommonModule, FormsModule]
 })
-export class BtnFloatingPage implements OnInit {
+export class BtnPrimaryLoginPage implements OnInit {
 
-  @Input() text: string = 'Hola, un gusto atenderte'; 
+  @Input() textoBtn: string = 'Iniciar sesión'; 
 
   constructor() { }
 

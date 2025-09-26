@@ -1,16 +1,17 @@
-.container-btn-primary {
-  width: 312px;
-  height: 40px;
-  max-width: 312px;
-  min-width: 180px;
+.container-btn-primary-login {
+  width: 418px;
+  height: 60px;
   flex-shrink: 0;
+
+  max-width: 418px;
+  min-width: 280px;
 }
 
-.btn-primary {
+.btn-primary-login {
   color: #2f2f2f;
   text-align: center;
   font-family: "Markazi Text";
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -32,9 +33,9 @@
   z-index: 2;
 }
 
-.btn-primary-background {
-  width: 272px;
-  height: 32px;
+.btn-primary-background-login {
+  width: 364px;
+  height: 48px;
   flex-shrink: 0;
 
   display: flex;
@@ -44,19 +45,18 @@
   border-radius: 10px;
   background: #e2e2e2;
   filter: blur(2px);
-  
   z-index: 1;
 }
 
-.btn-primary-background:hover {
+.btn-primary-background-login:hover {
   border-radius: 10px;
-  background: #ffc165;
+  background: #fff7eb;
   filter: blur(2px);
 }
 
-.btn-primary-background:active {
+.btn-primary-background-login:active {
   border-radius: 10px;
-  background: #ffcb53;
+  background: #fff;
   filter: blur(2px);
 }
 

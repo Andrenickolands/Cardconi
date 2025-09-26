@@ -169,4 +169,12 @@ export const routes: Routes = [
     path: 'footer-landing',
     loadComponent: () => import('./components/footers/footer-landing/footer-landing.page').then( m => m.FooterLandingPage)
   },
+  {
+    path: 'btn-primary-login',
+    loadComponent: () => import('./components/btns/btn-primary-login/btn-primary-login.page').then( m => m.BtnPrimaryLoginPage)
+  },
+  {
+    path: 'btn-cart',
+    loadComponent: () => import('./components/btns/btn-cart/btn-cart.page').then( m => m.BtnCartPage)
+  },
 ];
