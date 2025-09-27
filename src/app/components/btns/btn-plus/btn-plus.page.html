@@ -1,13 +1,9 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>btn-plus</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">btn-plus</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<div class="container-funtion-plus">
+  <div class="container-btn-plus">
+    <ion-button class="btn-plus" name="plus" slot="icon-only"></ion-button>
+  </div>
+  <span class="number-plus">{{ cant }}</span>
+  <div class="container-btn-plus">
+    <ion-button class="btn-plus" name="minus" slot="icon-only"></ion-button>
+  </div>
+</div>
