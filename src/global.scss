@@ -1,0 +1,110 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import '@ionic/angular/css/palettes/dark.system.css';
+
+/////variables
+:root {
+  --primary-color: #1C1C1C;
+  --secundary-color: #FFAD40;
+  --terciary-color: #E1BA86;
+
+  --background-color: #ffffff ;
+  --background-soft-white-color: #F5F5F5;
+  --background-ligth-white-color: #F7F7F7;
+  --background-dark-color: #1C1C1C;
+
+  --icon-color: #292929;
+
+  --text-color: #2F2F2F;
+  --text-soft-dark-color: #4C4C4C;
+  --text-soft-color: #818181;
+  --text-ligth-color: #D2D2D2;
+
+  --secundary-text-color: #FAEBD7;
+  --impact-text-color: #F3DCBE;
+  --text-white-color: #FBF9F6;
+  --text-header-color: #F8F6F0;
+  --text-green-color: #CAE4B4;
+  --red-color:#DF5353;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans";
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-ligth-color);
+}
+
+/* h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+h5 {
+}
+
+h6 {
+}
+
+h7 {
+} */
+
+.container {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100%;
+  padding: clamp(1rem, 3vw, 2rem) 1rem;
+  box-sizing: border-box;
+}

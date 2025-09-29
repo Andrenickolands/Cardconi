@@ -1,0 +1,93 @@
+.container-review-card {
+  width: 287px;
+  height: 287px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-img {
+  width: 264px;
+  height: 143px;
+  flex-shrink: 0;
+
+  border-radius: 18px 18px 0 0;
+
+  z-index: 5;
+}
+
+.container-inter {
+  width: 264px;
+  height: 256px;
+  flex-shrink: 0;
+
+  border-radius: 18px;
+  background: var(--background-soft-white-color);
+
+  z-index: 4;
+}
+
+.container-blur {
+  border-radius: 18px;
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.36) 0.2%,
+    rgba(217, 217, 217, 0.12) 101.11%
+  );
+  box-shadow: 22.97px 22.97px 33.981px 0 rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(25.486021041870117px);
+
+  z-index: 3;
+}
+
+.shape-inter-review-card-2 {
+  width: 110px;
+  height: 138px;
+  flex-shrink: 0;
+
+  background: var(--secundary-text-color);
+  box-shadow: 0 0 80px 80px rgba(250, 235, 215, 0.8);
+
+  z-index: 2;
+}
+
+.shape-inter-review-card-1 {
+  width: 110px;
+  height: 114px;
+  flex-shrink: 0;
+
+  background: var(--primary-color);
+  box-shadow: 0 0 80px 80px rgba(28, 28, 28, 0.2);
+
+  z-index: 1;
+}
+
+.container-tittle-card-review {
+  display: flex;
+  align-items: left;
+  gap: 2px;
+}
+
+.text-tittle-card-review {
+  color: var(--text-soft-color);
+  font-family: "Work Sans";
+  font-size: 12px;
+  font-style: normal;
+  text-align: left;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.48px;
+}
+
+.text-regular-card-review {
+  color: var(--text-soft-color);
+  font-family: "Work Sans";
+  font-size: 12px;
+  font-style: normal;
+  text-align: left;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.48px;
+}

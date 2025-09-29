@@ -1,0 +1,94 @@
+.container-btn-secundary {
+  width: 342px;
+  height: 40px;
+  max-width: 342px;
+  min-width: 180px;
+  flex-shrink: 0;
+}
+
+.btn-secundary {
+  color: var(--text-color);
+  text-align: center;
+  font-family: "Markazi Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  border: 1.699px solid rgba(232, 232, 232, 0.4);
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.36) 0.2%,
+    rgba(217, 217, 217, 0.12) 101.11%
+  );
+  box-shadow: 16px 16px 33px 0 rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(25px);
+
+  z-index: 2;
+}
+
+.btn-secundary-background {
+  width: 323px;
+  height: 32px;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: bottom;
+  align-items: center;
+  padding-bottom: 2px;
+
+  border-radius: 10px;
+  background: rgba(226, 226, 226, 0.2);
+  filter: blur(2px);
+
+  z-index: 1;
+}
+
+.btn-secundary-background:hover {
+  border-radius: 10px;
+  background: rgba(226, 226, 226, 0.2);
+  filter: blur(2px);
+}
+
+.btn-secundary-background:active {
+  border-radius: 10px;
+  background: rgba(226, 226, 226, 0.2);
+  filter: blur(2px);
+}
+
+/* Pantallas ultra anchas (1601px+) */
+@media (min-width: 1601px) {
+}
+
+/* Desktop grande (1201px - 1600px) */
+@media (min-width: 1201px) and (max-width: 1600px) {
+}
+
+/* Desktop pequeño (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* Para dispositivos táctiles - eliminar hover en móviles */
+@media (hover: none) and (pointer: coarse) {
+}
+
+/* Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Mobile mediano (480px - 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+}
+
+/* Mobile pequeño (360px - 479px) */
+@media (min-width: 360px) and (max-width: 479px) {
+}
+
+/* Mobile extra pequeño (320px - 359px) */
+@media (max-width: 359px) {
+}

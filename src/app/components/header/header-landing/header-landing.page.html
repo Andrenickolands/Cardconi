@@ -1,0 +1,64 @@
+<ion-header class="header">
+  <ion-toolbar class="toolbar-custom">
+    <ion-title>header-landing</ion-title>
+    <nav>
+      <div class="logo-info-container">
+        <div class="app-icon-header">
+          <img src="assets/images/Logo.png" alt="Logo cardconi" class="logo-imagen">
+        </div>
+
+        <div class="info-container">
+          <div class="nombre-app">{{ nombreApp }}</div>
+          <div class="ubicacion">
+            <ion-icon name="location-outline" class="icono-ubicacion"></ion-icon>
+            <span>{{ ubicacion }}</span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Tarjetas</a></li>
+        <li><a href="#contacto">Calidad</a></li>
+        <li><a href="#contacto">Sobre nosotros</a></li>
+        <li><a href="#contacto">Whatsapp</a></li>
+      </ul>
+
+      <div class="btn-nav">
+        <a href="#" class="signup-link">Registrarse</a>
+        <button class="btn-login" onclick="goToLogin()">
+          <svg class="user-icon" viewBox="0 0 24 24">
+            <path
+              d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 4L13 5V11C13 12.1 12.1 13 11 13S9 12.1 9 13V16L11 18H17C18.1 18 19 17.1 19 16V13C19 11.9 18.1 11 17 11V9H21ZM5 16C5 18.2 6.8 20 9 20S13 18.2 13 20V16H5Z" />
+          </svg>
+          <span>Iniciar Sesión</span>
+        </button>
+      </div>
+
+      <div slot="end" class="seccion-derecha">
+        <!-- Botón de perfil con avatar -->
+        <ion-button *ngIf="mostrarPerfil" fill="clear" class="boton-perfil" (click)="irAPerfil()">
+          <div class="avatar-usuario">
+            <span class="iniciales">{{ getIniciales() }}</span>
+          </div>
+
+          <div class="info-usuario">
+            <span class="nombre-usuario">{{ getNombreCompleto() }}</span>
+            <ion-icon name="chevron-down-outline" class="icono-dropdown"></ion-icon>
+          </div>
+        </ion-button>
+      </div>
+
+      <div slot="start" class="seccion-izquierda">
+        <ion-button fill="clear" class="boton-hamburguesa" (click)="abrirMenu()">
+          <ion-icon name="menu" slot="icon-only"></ion-icon>
+        </ion-button>
+
+        <!-- Botón hamburguesa TEMPORAL -->
+        <ion-button fill="clear" (click)="abrirMenu()" style="color: white;">
+          <ion-icon name="menu" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+    </nav>
+  </ion-toolbar>
+</ion-header>
