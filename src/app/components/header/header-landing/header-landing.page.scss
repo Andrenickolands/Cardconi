@@ -1,3 +1,23 @@
-.header{
-    
+.header ion-header {
+  width: 100%;
+  height: 90px;
+  flex-shrink: 0;
+
+  --background: var(--background-dark-color);
+
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+.toolbar-custom ion-toolbar {
+  --background: var(--background-dark-color);
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --min-height: 56px;
+}
+
+.app-icon-header {
+    width: 100px;
+    height: 100px;
 }

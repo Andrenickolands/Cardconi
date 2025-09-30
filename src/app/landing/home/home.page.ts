@@ -11,7 +11,7 @@ import { FooterLandingPage } from "src/app/components/footer/footer-landing/foot
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonButton, IonContent, CommonModule, FormsModule, HeaderLandingPage, BtnCtaPage, FooterLandingPage]
+  imports: [IonContent, CommonModule, FormsModule, HeaderLandingPage, BtnCtaPage, FooterLandingPage]
 })
 export class HomePage implements OnInit {
 

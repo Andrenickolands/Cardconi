@@ -76,7 +76,7 @@ a {
   color: var(--text-ligth-color);
 }
 
-/* Primary tittle */
+/* Primary tittle font*/
 h1 {
   color: var(--text-white-color);
   font-family: "EB Garamond";
@@ -87,7 +87,7 @@ h1 {
   letter-spacing: 7px;
 }
 
-/* Secundary tittle */
+/* Secundary tittle font*/
 h2 {
   color: var(--secundary-text-color);
   font-family: "Monsieur La Doulaise";
@@ -117,6 +117,35 @@ h6 {
 }
 
 h7 {
+}
+
+.text-logo {
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(99, 99, 99, 0.25);
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: #000;
+  font-family: "Vollkorn SC";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  background: linear-gradient(90deg, #a9a9a9 0%, #959595 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-menu {
+  color: var(--text-header-color);
+  text-align: center;
+
+  /* Text menu */
+  font-family: Lora;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .container {
