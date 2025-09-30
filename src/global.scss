@@ -34,32 +34,32 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+@import "@ionic/angular/css/palettes/dark.system.css";
 
 /////variables
 :root {
-  --primary-color: #1C1C1C;
-  --secundary-color: #FFAD40;
-  --terciary-color: #E1BA86;
+  --primary-color: #1c1c1c;
+  --secundary-color: #ffad40;
+  --terciary-color: #e1ba86;
 
-  --background-color: #ffffff ;
-  --background-soft-white-color: #F5F5F5;
-  --background-ligth-white-color: #F7F7F7;
-  --background-dark-color: #1C1C1C;
+  --background-color: #ffffff;
+  --background-soft-white-color: #f5f5f5;
+  --background-ligth-white-color: #f7f7f7;
+  --background-dark-color: #1c1c1c;
 
   --icon-color: #292929;
 
-  --text-color: #2F2F2F;
-  --text-soft-dark-color: #4C4C4C;
+  --text-color: #2f2f2f;
+  --text-soft-dark-color: #4c4c4c;
   --text-soft-color: #818181;
-  --text-ligth-color: #D2D2D2;
+  --text-ligth-color: #d2d2d2;
 
-  --secundary-text-color: #FAEBD7;
-  --impact-text-color: #F3DCBE;
-  --text-white-color: #FBF9F6;
-  --text-header-color: #F8F6F0;
-  --text-green-color: #CAE4B4;
-  --red-color:#DF5353;
+  --secundary-text-color: #faebd7;
+  --impact-text-color: #f3dcbe;
+  --text-white-color: #fbf9f6;
+  --text-header-color: #f8f6f0;
+  --text-green-color: #cae4b4;
+  --red-color: #df5353;
 }
 
 *,
@@ -76,10 +76,25 @@ a {
   color: var(--text-ligth-color);
 }
 
-/* h1 {
+/* Primary tittle */
+h1 {
+  color: var(--text-white-color);
+  font-family: "EB Garamond";
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 7px;
 }
 
+/* Secundary tittle */
 h2 {
+  color: var(--secundary-text-color);
+  font-family: "Monsieur La Doulaise";
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 h3 {
@@ -88,14 +103,21 @@ h3 {
 h4 {
 }
 
+/* DecoLine font */
 h5 {
+  color: var(--secundary-text-color);
+  font-family: "Monsieur La Doulaise";
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 h6 {
 }
 
 h7 {
-} */
+}
 
 .container {
   background-color: var(--background-color);
