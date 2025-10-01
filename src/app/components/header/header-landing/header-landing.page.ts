@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, MenuController, IonIcon, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, MenuController, IonIcon, IonButton, IonLabel, IonItem, IonList, IonBackButton } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './header-landing.page.html',
   styleUrls: ['./header-landing.page.scss'],
   standalone: true,
-  imports: [IonButton, IonIcon, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonBackButton, IonList, IonItem, IonLabel, IonButton, IonIcon, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class HeaderLandingPage implements OnInit {
 

@@ -1,22 +1,32 @@
 <ion-header class="header">
   <ion-toolbar class="toolbar-custom">
-    <ion-title>header-landing</ion-title>
-    <nav>
+    <div class="header-start" slot="start">
+      <ion-button fill="clear" class="boton-hamburguesa" (click)="abrirMenu()">
+        <ion-icon name="menu" slot="icon-only"></ion-icon>
+      </ion-button>
+
+      <!-- Botón hamburguesa TEMPORAL -->
+      <ion-button fill="clear" (click)="abrirMenu()" style="color: white;">
+        <ion-icon name="menu" slot="icon-only"></ion-icon>
+      </ion-button>
+
       <div class="logo-info-container">
         <div class="app-icon-header">
           <img src="assets/images/Logo.png" alt="Logo cardconi" class="logo-imagen">
         </div>
 
         <div class="info-container">
-          <div class="nombre-app">{{ nombreApp }}</div>
+          <div class="nombre-app text-logo">{{ nombreApp }}</div>
           <div class="ubicacion">
             <ion-icon name="location-outline" class="icono-ubicacion"></ion-icon>
             <span>{{ ubicacion }}</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <ul class="nav-menu" id="navMenu">
+    <div class="header-end" slot="end">
+      <ul class="nav-menu text-menu" id="navMenu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Tarjetas</a></li>
         <li><a href="#contacto">Calidad</a></li>
@@ -35,30 +45,97 @@
         </button>
       </div>
 
-      <div slot="end" class="seccion-derecha">
-        <!-- Botón de perfil con avatar -->
-        <ion-button *ngIf="mostrarPerfil" fill="clear" class="boton-perfil" (click)="irAPerfil()">
-          <div class="avatar-usuario">
-            <span class="iniciales">{{ getIniciales() }}</span>
-          </div>
+      <!-- Botón de perfil con avatar -->
+      <ion-button *ngIf="mostrarPerfil" fill="clear" class="boton-perfil" (click)="irAPerfil()">
+        <div class="avatar-usuario">
+          <span class="iniciales">{{ getIniciales() }}</span>
+        </div>
 
-          <div class="info-usuario">
-            <span class="nombre-usuario">{{ getNombreCompleto() }}</span>
-            <ion-icon name="chevron-down-outline" class="icono-dropdown"></ion-icon>
-          </div>
-        </ion-button>
-      </div>
-
-      <div slot="start" class="seccion-izquierda">
-        <ion-button fill="clear" class="boton-hamburguesa" (click)="abrirMenu()">
-          <ion-icon name="menu" slot="icon-only"></ion-icon>
-        </ion-button>
-
-        <!-- Botón hamburguesa TEMPORAL -->
-        <ion-button fill="clear" (click)="abrirMenu()" style="color: white;">
-          <ion-icon name="menu" slot="icon-only"></ion-icon>
-        </ion-button>
-      </div>
-    </nav>
+        <div class="info-usuario">
+          <span class="nombre-usuario">{{ getNombreCompleto() }}</span>
+          <ion-icon name="chevron-down-outline" class="icono-dropdown"></ion-icon>
+        </div>
+      </ion-button>
+    </div>
   </ion-toolbar>
 </ion-header>
+
+<!-- <ion-menu contentId="main-content" menuId="main-menu" side="start">
+  <ion-header class="header">
+    <ion-toolbar class="menu-toolbar">
+      <ion-title>
+        <div class="menu-header">
+          <img src="assets/logo-png" alt="Logo" class="logo-menu">
+          <span class="app-name-menu">NombreDeLaApp</span>
+        </div>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="menu-content">
+     Informacion del usuario -->
+<!-- <div class="user-info" *ngIf="usuario">
+      <div class="user-avatar">
+        <ion-icon name="person-circle"></ion-icon>
+      </div>
+
+      <div class="user-details">
+        <h3 class="user-name">{{usuario.nombre}}</h3>
+        <p class="user-email">{{usuario.email}}</p>
+      </div>
+     </div> -->
+
+<!-- Opciones del menú-->
+<!-- <ion-list class="menu-list">
+      <ion-item button (click)="navegarA('/home')" detail="false">
+        <ion-icon slot="start" name="home"></ion-icon>
+        <ion-label>Inicio</ion-label>"
+      </ion-item>
+
+      <ion-item button (click)="navegarA('/perfil')" detail="false">
+        <ion-icon slot="start" name="person"></ion-icon>
+        <ion-label>Tarjetas</ion-label>"
+      </ion-item>
+
+      <ion-item button (click)="navegarA('/productos')" detail="false">
+        <ion-icon slot="start" name="grid"></ion-icon>
+        <ion-label>Calidad</ion-label>"
+      </ion-item>
+
+      <ion-item button (click)="navegarA('/categorias')" detail="false">
+        <ion-icon slot="start" name="list"></ion-icon>
+        <ion-label>Sobre nosotros</ion-label>"
+      </ion-item>
+
+      <ion-item button (click)="navegarA('/favoritos')" detail="false">
+        <ion-icon slot="start" name="heart"></ion-icon>
+        <ion-label>Whatsapp</ion-label>"
+      </ion-item> -->
+
+<!-- <ion-item button (click)="navegarA('/pedidos')" detail="false">
+        <ion-icon slot="start" name="bag-handle"></ion-icon>
+        <ion-label>Mi perfil</ion-label>"
+      </ion-item>
+
+      <ion-item button (click)="navegarA('/pedidos')" detail="false">
+        <ion-icon slot="start" name="bag-handle"></ion-icon>
+        <ion-label>Mis Pedidos</ion-label>"
+      </ion-item>
+
+      <ion-item button (click)="navegarA('/ajustes')" detail="false">
+        <ion-icon slot="start" name="settings"></ion-icon>
+        <ion-label>Ajustes</ion-label>"
+      </ion-item> -->
+
+<!--  </ion-list> -->
+
+<!-- Boton Cerrar Sesion-->
+<!-- <div class="logout-section">
+        <ion-button expand="block" (click)="cerrarSesion()" class="btn-logout">
+          <ion-icon slot="start" name="log-out"></ion-icon>
+          <ion-label>Cerrar Sesion</ion-label>
+        </ion-button>>
+      </div>
+
+
+  </ion-content> -->
