@@ -5,13 +5,14 @@ import { IonContent } from '@ionic/angular/standalone';
 import { HeaderLandingPage } from "src/app/components/header/header-landing/header-landing.page";
 import { BtnCtaPage } from "src/app/components/btns/btn-cta/btn-cta.page";
 import { FooterLandingPage } from "src/app/components/footer/footer-landing/footer-landing.page";
+import { BtnCartPage } from "src/app/components/btns/btn-cart/btn-cart.page";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonContent, CommonModule, FormsModule, HeaderLandingPage, BtnCtaPage, FooterLandingPage]
+  imports: [IonContent, CommonModule, FormsModule, HeaderLandingPage, BtnCtaPage, FooterLandingPage, BtnCartPage]
 })
 export class HomePage implements OnInit {
 
