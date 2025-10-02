@@ -76,6 +76,14 @@ a {
   color: var(--text-ligth-color);
 }
 
+ul{
+  list-style: none;
+}
+
+li{
+  list-style: none;
+}
+
 /* Primary tittle font*/
 h1 {
   color: var(--text-white-color);
@@ -116,8 +124,6 @@ h5 {
 h6 {
 }
 
-h7 {
-}
 
 .text-logo {
   text-align: center;

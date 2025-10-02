@@ -95,7 +95,7 @@ export class HeaderLandingPage implements OnInit {
       const inicialApellido = this.usuarioActual.apellidos.charAt(0).toUpperCase();
       return inicialNombre + inicialApellido;
     }
-    return 'U';  // ← Valor por defecto
+    return 'US';  // ← Valor por defecto
   }
 
 

@@ -1,23 +1,26 @@
-.header ion-header {
-  width: 100%;
-  height: 90px;
-  flex-shrink: 0;
-
-  --background: var(--background-dark-color);
-
+.header-cont{
   display: flex;
-  width: 100%;
-  gap: 12px;
-}
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
 
-.toolbar-custom ion-toolbar {
-  --background: var(--background-dark-color);
-  --padding-start: 16px;
-  --padding-end: 16px;
-  --min-height: 56px;
-}
-
-.app-icon-header {
-    width: 100px;
-    height: 100px;
+  .nav-items{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+  .header-start{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+  .btn-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
 }
