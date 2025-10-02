@@ -88,7 +88,7 @@ li {
 h1 {
   color: var(--text-white-color);
   font-family: "EB Garamond";
-  font-size: 100px;
+  font-size: 90px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
@@ -99,26 +99,28 @@ h1 {
 h2 {
   color: var(--text-color);
   font-family: "Markazi Text";
-  font-size: 64px;
+  font-size: 54px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 
+/* DecoLine font */
 h3 {
+  color: var(--secundary-text-color);
+  font-family: "Monsieur La Doulaise";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 h4 {
 }
 
-/* DecoLine font */
+
 h5 {
-  color: var(--secundary-text-color);
-  font-family: "Monsieur La Doulaise";
-  font-size: 42px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  
 }
 
 h6 {

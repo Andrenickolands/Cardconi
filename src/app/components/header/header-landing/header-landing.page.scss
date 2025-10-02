@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem;
+  padding: 0.4rem 1rem 0.4rem 0;
 
   .text-logo {
     text-align: center;
@@ -21,11 +21,30 @@
     -webkit-text-fill-color: transparent;
   }
   .nav-items {
-    font-size: 1.4rem;
     display: flex;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 2.8rem;
+    padding-left: 12rem;
+
+    color: var(--text-header-color);
+    text-align: center;
+
+    /* Text menu */
+    font-family: Lora;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.2px;
   }
+
+  .nav-items a:hover {
+    color: #f3dcbe;
+  }
+  .whatsapp a:hover {
+    color: #CAE4B4;
+  }
+
   .header-start {
     text-align: center;
     display: flex;
