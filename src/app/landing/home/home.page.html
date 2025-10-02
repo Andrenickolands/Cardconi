@@ -1,46 +1,56 @@
 <app-header-landing></app-header-landing>
 
-<ion-content [fullscreen]="true" class="container" (ionScroll)="onContentScroll($event)" [scrollEvents]="true">
-  <div class="container-main">
-    <div class="container-text">
-      <h1>El lujo está en <br> tus manos</h1>
-      <h3>¿Estás listo para lo que se siente?</h3>
+<ion-content [fullscreen]="true" (ionScroll)="onContentScroll($event)" [scrollEvents]="true">
+  <div class="container">
+    <div class="container-main">
+      <div class="container-text">
+        <h1>El lujo está en <br> tus manos</h1>
+        <h3>¿Estás listo para lo que se siente?</h3>
+      </div>
+
+      <div class="hero-button">
+        <app-btn-cta></app-btn-cta>
+      </div>
+
+      <div class="cards-main"></div>
     </div>
 
-    <div class="hero-button">
-      <app-btn-cta></app-btn-cta>
+    <div class="deco-line" [style.--scroll-progress]="scrollProgress"></div>
+
+    <div class="container-banner">
+      <div class="fondo-banner">
+        <div class="container-content">
+          <div>
+             <img class="img" src="../../../assets/media/home/datafono-banner.png" alt="cardconi-nfc">
+          </div>
+          <div>
+            <!-- <img class=".img" src="../../../assets/media/home/datafono-banner.png" alt="cardconi-nfc"> -->
+          </div>
+          <div>
+            <!-- <img class=".img" src="../../../assets/media/home/datafono-banner.png" alt="cardconi-nfc"> -->
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="cards-main"></div>
-  </div>
+    <div class="container-type-card">
+      <h2>¿Qué tipo de tarjeta metálica buscas?</h2>
 
-  <div class="deco-line" [style.--scroll-progress]="scrollProgress"></div>
+      <div class="type-cards">
 
-  <div class="container-banner">
-    <div class="fondo-banner">
-      <div class="banner-secundary">
+      </div>
+
+    </div>
+
+    <div class="container-reviews">
+      <h2>Reseñas</h2>
+
+      <div class="review-cards-container">
 
       </div>
     </div>
   </div>
 
-  <div class="container-type-card">
-
-    <h2>¿Qué tipo de tarjeta metálica buscas?</h2>
-
-    <div class="type-cards">
-
-    </div>
-
-  </div>
-
-  <div class="reviews">
-    <h2>Reseñas</h2>
-
-    <div class="review-cards-container">
-
-    </div>
-  </div>
+  <app-footer-landing></app-footer-landing>
 </ion-content>
 
-<app-footer-landing></app-footer-landing>
