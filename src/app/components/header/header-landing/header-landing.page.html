@@ -7,12 +7,12 @@
           <h3 class="text-logo">{{nombreApp}}</h3>
         </div>
       </div>
-      <div class="nav-items">
+      <div class="nav-items text-menu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Tarjetas</a></li>
         <li><a href="#contacto">Calidad</a></li>
         <li><a href="#contacto">Sobre nosotros</a></li>
-        <li><a class="whatsapp" href="#contacto" >Whatsapp</a></li>
+        <li><a class="whatsapp" href="#contacto">Whatsapp</a></li>
       </div>
 
       <div class="btn-nav">
@@ -20,11 +20,11 @@
         <button class="btn-login" onclick="goToLogin()">
           Iniciar sesión
         </button>
-      <ion-button *ngIf="mostrarPerfil" fill="clear" class="boton-perfil" (click)="irAPerfil()">
-        <div class="avatar-usuario">
-          <span class="iniciales">{{ getIniciales() }}</span>
-        </div>
-      </ion-button>
+        <ion-button *ngIf="mostrarPerfil" fill="clear" class="boton-perfil" (click)="irAPerfil()">
+          <div class="avatar-usuario">
+            <span class="iniciales">{{ getIniciales() }}</span>
+          </div>
+        </ion-button>
       </div>
       <!-- <ion-button fill="clear" class="boton-hamburguesa" (click)="abrirMenu()">
         <ion-icon name="menu" slot="icon-only"></ion-icon>

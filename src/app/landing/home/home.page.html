@@ -40,24 +40,25 @@
         <div class="card" [class.volteada]="cardsHovered[0]" (mouseenter)="hoverCard(0, true)"
           (mouseleave)="hoverCard(0, false)">
           <div class="face front">
-            <img src="../../../assets/media/home/bank-card-front.png" alt="Tarjeta frontal">
+
           </div>
           <div class="face back">
-            <img src="../../../assets/media/home/card-back.png" alt="Tarjeta posterior">
           </div>
         </div>
 
         <div class="card" [class.volteada]="cardsHovered[1]" (mouseenter)="hoverCard(1, true)"
           (mouseleave)="hoverCard(1, false)">
-          <div class="face front">
-            <img src="../../../assets/media/home/presentation-card-front.png" alt="Tarjeta frontal">
+          <div class="face front presentation">
+            <p class="textPresentation"> Presentación </p>
           </div>
-          <div class="face back">
-            <img src="../../../assets/media/home/card-back.png" alt="Tarjeta posterior">
+          <div class="face back presentation">
+            <div class="fondo-back-card">
+              <img src="../../../assets/media/home/fondo-back-card.svg" alt="fondo-back-card">
+            </div>
+            <p class="textPresentation"> Ver diseños </p>
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="container-reviews">
