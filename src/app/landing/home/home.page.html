@@ -21,7 +21,7 @@
       <div class="fondo-banner">
         <div class="container-content">
           <div>
-             <img class="img" src="../../../assets/media/home/datafono-banner.png" alt="cardconi-nfc">
+            <img class="img" src="../../../assets/media/home/datafono-banner.png" alt="cardconi-nfc">
           </div>
           <div>
             <!-- <img class=".img" src="../../../assets/media/home/datafono-banner.png" alt="cardconi-nfc"> -->
@@ -37,7 +37,25 @@
       <h2>¿Qué tipo de tarjeta metálica buscas?</h2>
 
       <div class="type-cards">
+        <div class="card" [class.volteada]="cardsHovered[0]" (mouseenter)="hoverCard(0, true)"
+          (mouseleave)="hoverCard(0, false)">
+          <div class="face front">
+            <img src="../../../assets/media/home/bank-card-front.png" alt="Tarjeta frontal">
+          </div>
+          <div class="face back">
+            <img src="../../../assets/media/home/card-back.png" alt="Tarjeta posterior">
+          </div>
+        </div>
 
+        <div class="card" [class.volteada]="cardsHovered[1]" (mouseenter)="hoverCard(1, true)"
+          (mouseleave)="hoverCard(1, false)">
+          <div class="face front">
+            <img src="../../../assets/media/home/presentation-card-front.png" alt="Tarjeta frontal">
+          </div>
+          <div class="face back">
+            <img src="../../../assets/media/home/card-back.png" alt="Tarjeta posterior">
+          </div>
+        </div>
       </div>
 
     </div>
@@ -46,11 +64,9 @@
       <h2>Reseñas</h2>
 
       <div class="review-cards-container">
-
+        <app-review-card></app-review-card>
       </div>
     </div>
   </div>
-
   <app-footer-landing></app-footer-landing>
 </ion-content>
-
