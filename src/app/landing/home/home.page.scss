@@ -12,13 +12,15 @@
   text-align: left;
 }
 .hero-button{
-  position: absolute;
-  right: 45%;
-  bottom: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3rem;
 }
 .deco-line {
   width: 100%;
-  height: 16px;
+  height: 24px;
   background-size: 200% 100%;
   background-image: linear-gradient(
     90deg,
@@ -28,7 +30,7 @@
     #948b7f 75%,
     #faebd7 100%
   );
-  animation: shimmer-smooth 5s infinite ease-in-out;
+  animation: shimmer-smooth 8s infinite ease-in-out;
 }
 
 @keyframes shimmer-smooth {
@@ -45,11 +47,31 @@
 
 
 .container-banner {
-  background-color: var(--text-ligth-color);
+  background-color: var(--background-color);
   width: 100%;
-  height: 630px;
+  height: 84vh;
   flex-shrink: 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.fondo-banner{
+  width: 100%;
+  height: 84vh;
+  flex-shrink: 0;
+  background-image: url("../../../assets/media/home/Fondo-banner-secundary.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container-type-card {
+  background-color: var(--background-color);
+  width: 100%;
+  height: 84vh;
+  flex-shrink: 0;
+}
+
+h2{
+  margin-top: 4rem;
 }

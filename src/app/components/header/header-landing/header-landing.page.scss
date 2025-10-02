@@ -1,41 +1,57 @@
-.header-cont{
+.header-cont {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem;
 
-  .nav-items{
+  .text-logo {
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(99, 99, 99, 0.25);
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: #000;
+    font-family: "Vollkorn SC";
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    background: linear-gradient(90deg, #a9a9a9 0%, #959595 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-items {
     font-size: 1.4rem;
     display: flex;
     justify-content: space-between;
     gap: 4rem;
   }
-  .header-start{
+  .header-start {
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
+    padding-left: 2rem;
   }
-  .btn-nav{
+  .btn-nav {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
     gap: 1rem;
   }
-  .btn-login{
+  .btn-login {
     font-size: 1.4rem;
     padding: 0.5rem;
     border-radius: 0.8rem;
     background-color: var(--text-soft-color);
-    
   }
-  ion-button{
+  ion-button {
     height: 4.5rem;
     width: 4.5rem;
   }
-  .iniciales{
+  .iniciales {
     background: linear-gradient(130deg, #fff2e0 -27.66%, #ffad40 165.06%);
     color: var(--text-color);
     font-size: 1.8rem;
