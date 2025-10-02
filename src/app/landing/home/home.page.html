@@ -1,20 +1,23 @@
 <app-header-landing></app-header-landing>
 
-<ion-content [fullscreen]="true" class="container">
+<ion-content [fullscreen]="true" class="container" (ionScroll)="onContentScroll($event)" [scrollEvents]="true">
   <div class="container-main">
     <div class="container-text">
       <h1>El lujo está en <br> tus manos</h1>
       <h5>¿Estás listo para lo que se siente?</h5>
     </div>
 
-    <app-btn-cta></app-btn-cta>
+    <div class="hero-button">
+      <app-btn-cta></app-btn-cta>
+    </div>
 
     <div class="cards-main">
 
     </div>
   </div>
 
-  <div class="deco-line"></div>
+  <div class="deco-line" [style.--scroll-progress]="scrollProgress"></div>
+
   <div class="container-banner">
 
   </div>

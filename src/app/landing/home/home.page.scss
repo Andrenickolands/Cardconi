@@ -1,45 +1,61 @@
 .container-main {
+  position: relative;
   width: 100%;
-  height: 100vh;
-  flex-shrink: 0;
-
-  display: flex;
-  justify-content: baseline;
-  align-items: center;
-  flex-direction: column;
-
+  height: 80vh;
+  padding: 5rem;
   background-image: url("../../../assets/media/home/banner_hero_home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position:  center;
 }
-
-.container-text {
-  margin-top: 6rem;
-  margin-left: -28rem;
+.container-text{
+  text-align: left;
 }
-
-h5 {
-  margin-top: 2.2rem;
+.hero-button{
+  position: absolute;
+  right: 45%;
+  bottom: 30%;
 }
-
 .deco-line {
   width: 100%;
   height: 16px;
-
-  background: radial-gradient(
-    77.98% 110.3% at 17.62% 34.98%,
+  background-size: 200% 100%;
+  background-image: linear-gradient(
+    90deg,
     #faebd7 0%,
-    #948b7f 100%
+    #948b7f 25%,
+    #faebd7 50%,
+    #948b7f 75%,
+    #faebd7 100%
   );
+  animation: shimmer-smooth 5s infinite ease-in-out;
+}
+
+@keyframes shimmer-smooth {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(2);
+  }
 }
 
 .container-banner {
+  background-color: var(--text-ligth-color);
   width: 100%;
   height: 630px;
   flex-shrink: 0;
-
-  background-image: url("../../../assets/media/home/Fondo-banner-secundary.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -21,6 +21,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.4rem;
     gap: 1rem;
+  }
+  .btn-login{
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    background-color: var(--text-soft-color);
+    
+  }
+  ion-button{
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+  .iniciales{
+    background: linear-gradient(130deg, #fff2e0 -27.66%, #ffad40 165.06%);
+    color: var(--text-color);
+    font-size: 1.8rem;
+    border-radius: 2rem;
+    padding: 1rem;
   }
 }
