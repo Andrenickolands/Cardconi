@@ -8,28 +8,29 @@
   background-size: cover;
   background-position: center;
 }
+
 .container-text {
   text-align: left;
 }
+
 .hero-button {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-top: 3rem;
+  margin-top: 6rem; //4rem pc pequeño
 }
+
 .deco-line {
   width: 100%;
   height: 24px;
   background-size: 200% 100%;
-  background-image: linear-gradient(
-    90deg,
-    #faebd7 0%,
-    #948b7f 25%,
-    #faebd7 50%,
-    #948b7f 75%,
-    #faebd7 100%
-  );
+  background-image: linear-gradient(90deg,
+      #faebd7 0%,
+      #948b7f 25%,
+      #faebd7 50%,
+      #948b7f 75%,
+      #faebd7 100%);
   animation: shimmer-smooth 10s infinite ease-in-out;
 }
 
@@ -37,9 +38,11 @@
   0% {
     background-position: 0% 0%;
   }
+
   50% {
     background-position: 50% 0%;
   }
+
   100% {
     background-position: 100% 100%;
   }
@@ -54,6 +57,7 @@
   background-size: cover;
   background-position: center;
 }
+
 .fondo-banner {
   width: 100%;
   height: 86vh;
@@ -90,7 +94,7 @@
   position: relative;
   background-color: var(--background-color);
   width: 100%;
-  height: 86vh;
+  height: 130vh;
   flex-shrink: 0;
 }
 
@@ -100,7 +104,7 @@ h2 {
 }
 
 h3 {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .type-cards {
@@ -136,7 +140,7 @@ h3 {
   line-height: normal;
 }
 
-.presentation{
+.presentation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,11 +163,9 @@ h3 {
 
 .front {
   border-radius: 24px;
-  background: radial-gradient(
-    121.82% 103.22% at 42.06% -13.48%,
-    #4c4c4c 0%,
-    #1c1c1c 100%
-  );
+  background: radial-gradient(121.82% 103.22% at 42.06% -13.48%,
+      #4c4c4c 0%,
+      #1c1c1c 100%);
   box-shadow: -4px -4px 8px 0 #000 inset,
     10px 10px 18px 4px rgba(45, 45, 45, 0.22),
     24px 28px 40px 4px rgba(45, 45, 45, 0.25);
@@ -178,15 +180,25 @@ h3 {
   width: 100%;
   height: 100%;
 }
+
 .fondo-back-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .textPresentation {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
+}
+
+.review-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 20rem);
+  gap: 20px;
+  padding: 0 4rem 4rem 4rem;
 }
