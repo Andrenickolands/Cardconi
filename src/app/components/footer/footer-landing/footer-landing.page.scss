@@ -23,6 +23,7 @@
   gap: 30px;
   top: 6rem;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .container-pay-icons-footer {
@@ -55,17 +56,44 @@ a{
 }
 
 
+/* Pantallas ultra anchas (1601px+) */
+@media (min-width: 1601px) {
+}
+
+/* Desktop grande (1401px - 1600px) */
+@media (min-width: 1401px) and (max-width: 1600px) {
+  .container-text-footer{
+    font-size: 20px;
+  }
+   
+}
+
+/* Desktop mediano (1201px - 1400px) */
+@media (min-width: 1201px) and (max-width: 1400px) {
+ 
+}
+
+/* Desktop pequeño (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  
+}
+
 /* Para dispositivos táctiles - eliminar hover en móviles */
-@media (hover: none) and (pointer: coarse) {}
+@media (hover: none) and (pointer: coarse) {
+}
 
 /* Tablet (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {}
+@media (min-width: 769px) and (max-width: 1024px) {
+}
 
 /* Mobile mediano (480px - 768px) */
-@media (min-width: 480px) and (max-width: 768px) {}
+@media (min-width: 480px) and (max-width: 768px) {
+}
 
 /* Mobile pequeño (360px - 479px) */
-@media (min-width: 360px) and (max-width: 479px) {}
+@media (min-width: 360px) and (max-width: 479px) {
+}
 
 /* Mobile extra pequeño (320px - 359px) */
-@media (max-width: 359px) {}
+@media (max-width: 359px) {
+}

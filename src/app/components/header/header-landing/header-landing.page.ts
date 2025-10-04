@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, MenuController, IonIcon, IonButton, IonLabel, IonItem, IonList, IonBackButton } from '@ionic/angular/standalone';
+import { IonHeader, IonTitle, IonToolbar, MenuController, IonIcon, IonButton, IonLabel, IonItem, IonList, IonBackButton } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-header-landing',
@@ -23,7 +24,8 @@ export class HeaderLandingPage implements OnInit {
 
   constructor(
     private menuController: MenuController,      // ← Para controlar el menú lateral
-    private router: Router                       // ← Para navegación entre páginas
+    private router: Router,
+    private viewportScroller: ViewportScroller                      // ← Para navegación entre páginas
   ) {
     // Al inicializar el componente, obtenemos los datos del usuario logueado
     this.cargarUsuarioActual();
@@ -98,5 +100,26 @@ export class HeaderLandingPage implements OnInit {
     return 'US';  // ← Valor por defecto
   }
 
+  navegarASeccion(fragmento: string) {
+    // Si ya estás en home, solo hace scroll
+    if (this.router.url === '/home' || this.router.url === '/') {
+      this.scrollToElement(fragmento);
+    } else {
+      // Si estás en otra página, navega a home y luego hace scroll
+      this.router.navigate(['/home'], { fragment: fragmento }).then(() => {
+        setTimeout(() => {
+          this.scrollToElement(fragmento);
+        }, 100);
+      });
+    }
+  }
+
+  private scrollToElement(elementId: string) {
+    const element = document.getElementById(elementId);
+    if (element) {
+
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 
 }
