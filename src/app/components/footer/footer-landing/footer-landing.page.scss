@@ -32,6 +32,13 @@
   justify-content: center;
   gap: 11px;
   flex-shrink: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  pointer-events: auto;
 }
 
 a{
@@ -53,6 +60,13 @@ a{
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  pointer-events: auto;
 }
 
 

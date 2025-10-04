@@ -93,6 +93,13 @@ h1 {
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 7px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  pointer-events: auto;
 }
 
 /* Secundary tittle font*/
@@ -103,6 +110,13 @@ h2 {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  pointer-events: auto;
 }
 
 /* DecoLine font */
@@ -113,6 +127,13 @@ h3 {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  pointer-events: auto;
 }
 
 h4 {

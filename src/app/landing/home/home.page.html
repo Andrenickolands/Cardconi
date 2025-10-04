@@ -17,7 +17,7 @@
 
     <div class="deco-line" [style.--scroll-progress]="scrollProgress"></div>
 
-    <div class="container-banner" >
+    <div class="container-banner">
       <div class="fondo-banner">
         <div class="container-content">
           <div>
@@ -39,26 +39,39 @@
       <div class="type-cards">
         <div class="card" [class.volteada]="cardsHovered[0]" (mouseenter)="hoverCard(0, true)"
           (mouseleave)="hoverCard(0, false)">
-          <div class="face front">
-
+          <div class="face front container-text-card">
+            <p class="text-card-num"> 8694 1245 1234 7655 7749 </p>
+            <div class="postion-icon">
+              <img src="../../../assets/media/home/icon-card.svg" alt="icon-card">
+            </div>
+            <p class="text-card-principal"> Bancaría </p>
+            <div class="position-name container-secundary">
+              <p class="text-card-subtitle"> Card Holder Name </p>
+              <p class="text-card-terciary"> Bancary card </p>
+            </div>
+            <div class="position-valid container-secundary">
+              <p class="text-card-subtitle"> Valid thru </p>
+              <p class="text-card-terciary"> 77/77 </p>
+            </div>
           </div>
-          <div class="face back">
+          <div class="face back container-text-card">
             <div class="fondo-back-card">
               <img src="../../../assets/media/home/fondo-back-card.svg" alt="fondo-back-card">
             </div>
+            <p class="text-card-principal"> Ver diseños </p>
           </div>
         </div>
 
         <div class="card" [class.volteada]="cardsHovered[1]" (mouseenter)="hoverCard(1, true)"
           (mouseleave)="hoverCard(1, false)">
-          <div class="face front presentation">
-            <p class="textPresentation"> Presentación </p>
+          <div class="face front container-text-card">
+            <p class="text-card-principal"> Presentación </p>
           </div>
-          <div class="face back presentation">
+          <div class="face back container-text-card">
             <div class="fondo-back-card">
               <img src="../../../assets/media/home/fondo-back-card.svg" alt="fondo-back-card">
             </div>
-            <p class="textPresentation"> Ver diseños </p>
+            <p class="text-card-principal"> Ver diseños </p>
           </div>
         </div>
       </div>
@@ -81,5 +94,5 @@
   </div>
 
   <app-footer-landing></app-footer-landing>
-  
+
 </ion-content>

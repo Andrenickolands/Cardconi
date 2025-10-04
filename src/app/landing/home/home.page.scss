@@ -66,7 +66,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
+
   .fondo-banner {
     width: 100%;
     height: 86vh;
@@ -99,12 +99,19 @@ h3 {
   height: 86vh;
   flex-shrink: 0;
 
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  pointer-events: auto;
+
   .type-cards {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 6rem;
+    gap: 8rem;
 
     .card {
       position: relative;
@@ -162,13 +169,13 @@ h3 {
         }
       }
 
-      .presentation {
+      .container-text-card {
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
-      .textPresentation {
+      .text-card-principal {
         position: absolute;
         display: flex;
         align-items: center;
@@ -179,6 +186,69 @@ h3 {
         text-align: center;
         font-family: Prata;
         font-size: 58px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .text-card-num {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        z-index: 2;
+
+        color: #818181;
+        -webkit-text-stroke-width: 0.34px;
+        -webkit-text-stroke-color: #3d3d3d;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.64px;
+      }
+
+      .container-secundary {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .postion-icon {
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        z-index: 2;
+      }
+
+      .position-name {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        z-index: 2;
+      }
+      .position-valid {
+        position: absolute;
+        bottom: 2rem;
+        right: 3rem;
+        z-index: 2;
+      }
+
+      .text-card-terciary {
+        color: #525252;
+        font-family: "Work Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      .text-card-subtitle {
+        color: #cfcfcf;
+        font-family: "Work Sans";
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
