@@ -169,37 +169,6 @@ h6 {
   box-sizing: border-box;
 }
 
-/* Pantallas ultra anchas (1601px+) */
-@media (min-width: 1601px) {
-}
-
-/* Desktop grande (1201px - 1600px) */
-@media (min-width: 1201px) and (max-width: 1600px) {
-}
-
-/* Desktop pequeño (1025px - 1200px) */
-@media (min-width: 1025px) and (max-width: 1200px) {
-  /* Primary tittle font*/
-  h1 {
-    font-size: 90px;
-    letter-spacing: 7px;
-  }
-
-  /* Secundary tittle font*/
-  h2 {
-    font-size: 48px;
-  }
-
-  /* DecoLine font */
-  h3 {
-    font-size: 40px;
-  }
-
-  .text-menu {
-    font-size: 18px;
-    letter-spacing: -0.2px;
-  }
-}
 
 /* Pantallas ultra anchas (1601px+) */
 @media (min-width: 1601px) {
@@ -207,29 +176,7 @@ h6 {
 
 /* Desktop grande (1401px - 1600px) */
 @media (min-width: 1401px) and (max-width: 1600px) {
-  h1 {
-    font-size: 88px;
-    letter-spacing: 7px;
-  }
-
-  /* Secundary tittle font*/
-  h2 {
-    font-size: 42px;
-  }
-
-  /* DecoLine font */
-  h3 {
-    font-size: 40px;
-  }
-
-  h4 {
-  }
-
-  h5 {
-  }
-
-  h6 {
-  }
+  
 }
 
 /* Desktop mediano (1201px - 1400px) */
