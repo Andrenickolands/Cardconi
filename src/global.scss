@@ -142,9 +142,9 @@ h4 {
 h5 {
 }
 
-h6 {
+.custom-background {
+  --background: linear-gradient(0deg,rgba(28, 28, 28, 1) 57%, rgba(129, 129, 129, 1) 100%);
 }
-
 .text-menu {
   color: var(--text-header-color);
   text-align: center;

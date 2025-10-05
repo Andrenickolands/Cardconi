@@ -17,7 +17,7 @@
     
       <div class="btn-nav">
         <a href="#" class="signup-link">Registrarse</a>
-        <button class="btn-login" onclick="goToLogin()">
+        <button class="btn-login" (click)="goToLogin()">
           Iniciar sesión
         </button>
         <ion-button *ngIf="mostrarPerfil" fill="clear" class="boton-perfil" (click)="irAPerfil()">

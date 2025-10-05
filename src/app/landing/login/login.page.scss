@@ -1,0 +1,104 @@
+.login-page {
+
+    .name-app h2{
+        font-size: 4rem;
+        font-weight: bold;
+        color: var(--text-ligth-color);
+        text-align: center;
+        margin-top: 2.4rem;
+    }
+    .fields-container{
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3.2rem;
+    }
+
+    .login-button, .register-button {
+        margin-top: 1.6rem;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .icons-buttons{
+        display: flex;
+        justify-content: space-between;
+        gap: 1px;
+        margin-left: 3rem;
+    }
+
+    .email-input,
+    .password-input {
+        ion-input {
+            --color: var(--text-soft-color);
+            --placeholder-color: var(--text-soft-color);
+            --placeholder-opacity: 1;
+        }
+
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 16px;
+
+        .custom-email-input,
+        .custom-password-input {
+            --background: #3a3a3a;
+            --border-radius: 6px;
+            --padding-start: 16px;
+            --padding-end: 16px;
+            --inner-padding-end: 0;
+            --min-height: 50px;
+            border: 1px solid #4a4a4a;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                border-color: #5a5a5a;
+            }
+
+            &.item-has-focus {
+                border-color: #666;
+                --background: #404040;
+            }
+
+            ion-icon {
+                color: #6a6a6a;
+                font-size: 22px;
+                margin-right: 12px;
+                min-width: 22px;
+                display: flex;
+                align-items: center;
+            }
+
+            .toggle-password {
+                color: #6a6a6a;
+                font-size: 22px;
+                cursor: pointer;
+                margin-left: 8px;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #9a9a9a;
+                }
+            }
+
+            .icon-wrapper {
+                display: flex;
+                align-items: center;
+                margin-right: 12px;
+
+                .mail-icon {
+                    width: 22px;
+                    height: 22px;
+                    color: #6a6a6a;
+                    stroke: #6a6a6a;
+                }
+            }
+        }
+    }
+    .forget-password a {
+        text-decoration: none;
+        color: var(--text-ligth-color);
+    }
+}

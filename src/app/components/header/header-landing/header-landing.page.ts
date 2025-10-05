@@ -122,4 +122,8 @@ export class HeaderLandingPage implements OnInit {
     }
   }
 
+   goToLogin() {
+    this.router.navigate(['/login']);
+  }
+
 }

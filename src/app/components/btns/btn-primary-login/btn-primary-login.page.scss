@@ -1,93 +1,44 @@
-.container-btn-primary-login {
-  width: 418px;
-  height: 60px;
-  flex-shrink: 0;
+.button-container {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 24px;
 
-  max-width: 418px;
-  min-width: 280px;
-}
+  .login-button {
+    --background: linear-gradient(180deg, #d4d4d4 0%, #a8a8a8 100%);
+    --background-hover: linear-gradient(180deg, #e0e0e0 0%, #b8b8b8 100%);
+    --background-activated: linear-gradient(180deg, #c0c0c0 0%, #959595 100%);
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --color: #2a2a2a;
+    
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    
+    border: 2px solid #7c4dff;
+    position: relative;
+    overflow: hidden;
 
-.btn-primary-login {
-  color: var(--text-color);
-  text-align: center;
-  font-family: "Markazi Text";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(135deg, #7c4dff, #5e35b1);
+      border-radius: 8px;
+      z-index: -1;
+    }
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    &:hover {
+      --background: linear-gradient(180deg, #e0e0e0 0%, #b8b8b8 100%);
+    }
 
-  border-radius: 10px;
-  border: 1.699px solid rgba(232, 232, 232, 0.4);
-  background: linear-gradient(
-    110deg,
-    rgba(255, 255, 255, 0.36) 0.2%,
-    rgba(217, 217, 217, 0.12) 101.11%
-  );
-  box-shadow: 22.97px 22.97px 33.981px 0 rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(25.486021041870117px);
-
-  z-index: 2;
-}
-
-.btn-primary-background-login {
-  width: 364px;
-  height: 48px;
-  flex-shrink: 0;
-
-  display: flex;
-  justify-content: top;
-  align-items: center;
-
-  border-radius: 10px;
-  background: #e2e2e2;
-  filter: blur(2px);
-  z-index: 1;
-}
-
-.btn-primary-background-login:hover {
-  border-radius: 10px;
-  background: #fff7eb;
-  filter: blur(2px);
-}
-
-.btn-primary-background-login:active {
-  border-radius: 10px;
-  background: #fff;
-  filter: blur(2px);
-}
-
-/* Pantallas ultra anchas (1601px+) */
-@media (min-width: 1601px) {
-}
-
-/* Desktop grande (1201px - 1600px) */
-@media (min-width: 1201px) and (max-width: 1600px) {
-}
-
-/* Desktop pequeño (1025px - 1200px) */
-@media (min-width: 1025px) and (max-width: 1200px) {
-}
-
-/* Para dispositivos táctiles - eliminar hover en móviles */
-@media (hover: none) and (pointer: coarse) {
-}
-
-/* Tablet (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-}
-
-/* Mobile mediano (480px - 768px) */
-@media (min-width: 480px) and (max-width: 768px) {
-}
-
-/* Mobile pequeño (360px - 479px) */
-@media (min-width: 360px) and (max-width: 479px) {
-}
-
-/* Mobile extra pequeño (320px - 359px) */
-@media (max-width: 359px) {
+    &:active {
+      --background: linear-gradient(180deg, #c0c0c0 0%, #959595 100%);
+    }
+  }
 }

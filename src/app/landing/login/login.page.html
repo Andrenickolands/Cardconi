@@ -1,13 +1,40 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="custom-background login-page">
+  <div class="fields-container">
+    <div class="name-app">
+      <h2>Cardconi</h2>
+    </div>
+    <div class="email-input">
+      <ion-item class="custom-email-input" lines="none">
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+        <ion-input type="email" placeholder="Escribe tu correo" [(ngModel)]="email">
+        </ion-input>
+      </ion-item>
+    </div>
+    <div class="password-input">
+      <ion-item class="custom-password-input" lines="none">
+        <ion-icon name="key-outline" slot="start"></ion-icon>
+        <ion-input [type]="showPassword ? 'text' : 'password'" placeholder="Escribe tu contraseña"
+          [(ngModel)]="password">
+        </ion-input>
+        <ion-icon [name]="showPassword ? 'eye-off-outline' : 'eye-outline'" slot="end" class="toggle-password"
+          (click)="togglePassword()">
+        </ion-icon>
+      </ion-item>
+    </div>
+    <div class="login-button">
+      <app-btn-primary-login></app-btn-primary-login>
+    </div>
+    <div class="forget-password">
+      <a href="#">¿Olvidaste tu contraseña?</a>
+    </div>
+    <div class="register-button">
+      <app-btn-secundary-login></app-btn-secundary-login>
+    </div>
+    <div class="icons-buttons">
+      <img src="../../../../assets/media/generalIcons/google_icon.png" alt="mastercard" />
+      <img src="../../../../assets/media/generalIcons/face_icon.png" alt="visa" />
+      <img src="../../../../assets/media/generalIcons/apple_icon.png" alt="american express" />
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    </div>
+  </div>
 </ion-content>
