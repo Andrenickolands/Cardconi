@@ -1,13 +1,116 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>sign-up</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="register-container">
+    <h1 class="register-title">Regístrate</h1>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">sign-up</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <!-- NOMBRE -->
+      <div class="input-container">
+        <ion-item class="custom-input" lines="none" [class.invalid]="isFieldInvalid('nombre')">
+          <ion-input type="text" placeholder="Escribe tus nombres" formControlName="nombre"
+            (ionBlur)="validateField('nombre')">
+          </ion-input>
+        </ion-item>
+      </div>
+
+      <!-- APELLIDOS -->
+      <div class="input-container">
+        <ion-item class="custom-input" lines="none" [class.invalid]="isFieldInvalid('apellidos')">
+          <ion-input type="text" placeholder="Escribe tus apellidos" formControlName="apellidos"
+            (ionBlur)="validateField('apellidos')">
+          </ion-input>
+        </ion-item>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="input-container">
+        <ion-item class="custom-input" lines="none" [class.invalid]="isFieldInvalid('email')">
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+          <ion-input type="email" placeholder="Escribe tu correo" formControlName="email"
+            (ionBlur)="validateField('email')">
+          </ion-input>
+        </ion-item>
+      </div>
+
+      <!-- TELÉFONO CON BANDERA -->
+      <div class="input-container">
+        <ion-item class="custom-input phone-input" lines="none" [class.invalid]="isFieldInvalid('telefono')">
+          <div class="phone-prefix" slot="start">
+            <span class="flag">🇨🇴</span>
+            <span class="code">+100</span>
+          </div>
+          <ion-input type="tel" placeholder="Escribe tu número de celular" formControlName="telefono" maxlength="10"
+            (ionBlur)="validateField('telefono')">
+          </ion-input>
+        </ion-item>
+      </div>
+
+      <!-- FECHA DE NACIMIENTO -->
+      <div class="input-container">
+        <ion-item class="custom-input" lines="none" [class.invalid]="isFieldInvalid('fechaNacimiento')">
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <ion-input type="date" placeholder="Escribe tu fecha de nacimiento" formControlName="fechaNacimiento"
+            (ionChange)="validateField('fechaNacimiento')">
+          </ion-input>
+        </ion-item>
+      </div>
+
+      <!-- NOTA INFORMATIVA -->
+      <div class="info-box">
+        <p>La contraseña debe cumplir mínimo 8 caracteres, al menos una mayúscula, minúscula, número y símbolo (# $ * )
+        </p>
+      </div>
+
+      <!-- CONTRASEÑA -->
+      <div class="input-container">
+        <ion-item class="custom-input" lines="none" [class.invalid]="isFieldInvalid('password')">
+          <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+          <ion-input [type]="showPassword ? 'text' : 'password'" placeholder="Escribe tu contraseña"
+            formControlName="password" (ionBlur)="validateField('password')">
+          </ion-input>
+          <ion-icon [name]="showPassword ? 'eye-off-outline' : 'eye-outline'" slot="end" class="toggle-password"
+            (click)="togglePassword()">
+          </ion-icon>
+        </ion-item>
+      </div>
+
+      <!-- CONFIRMAR CONTRASEÑA -->
+      <div class="input-container">
+        <ion-item class="custom-input" lines="none" [class.invalid]="isFieldInvalid('confirmPassword')">
+          <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+          <ion-input [type]="showConfirmPassword ? 'text' : 'password'" placeholder="Confirma tu contraseña"
+            formControlName="confirmPassword" (ionBlur)="validateField('confirmPassword')">
+          </ion-input>
+          <ion-icon [name]="showConfirmPassword ? 'eye-off-outline' : 'eye-outline'" slot="end" class="toggle-password"
+            (click)="toggleConfirmPassword()">
+          </ion-icon>
+        </ion-item>
+      </div>
+
+      <!-- CHECKBOX TÉRMINOS -->
+      <div class="checkbox-container">
+        <ion-checkbox formControlName="aceptaTerminos" [checked]="registerForm.get('aceptaTerminos')?.value"
+          (ionChange)="registerForm.get('aceptaTerminos')?.setValue($event.detail.checked)">
+        </ion-checkbox>
+        <span class="checkbox-label">Acepto los términos y condiciones</span>
+      </div>
+
+      <!-- CHECKBOX POLÍTICA -->
+      <div class="checkbox-container">
+        <ion-checkbox formControlName="aceptaPolitica" [checked]="registerForm.get('aceptaPolitica')?.value"
+          (ionChange)="registerForm.get('aceptaPolitica')?.setValue($event.detail.checked)">
+        </ion-checkbox>
+        <span class="checkbox-label">Acepto la política de privacidad</span>
+      </div>
+
+      <div class="button-container">
+        <ion-button class="register-button" expand="block" type="submit" [disabled]="registerForm.invalid" (click)="goToLogin()">
+          Registrarme
+        </ion-button>
+      </div>
+      <div class="back-link">
+        <a href="#">Volver</a>
+      </div>
+    </form>
+  </div>
 </ion-content>
