@@ -35,4 +35,8 @@ export class HomePage implements OnInit {
     this.cardsHovered[index] = isHovering;
   }
 
+  gotToCards(){
+  
+  }
+
 }

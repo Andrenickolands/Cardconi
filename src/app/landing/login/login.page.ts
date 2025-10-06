@@ -12,7 +12,7 @@ import { BtnSecundaryLoginPage } from "src/app/components/btns/btn-secundary-log
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonItem, IonLabel, IonInput, IonIcon, IonInputPasswordToggle, BtnCtaPage, BtnCartPage, ReviewCardPage, BtnPrimaryLoginPage, BtnSecundaryLoginPage]
+  imports: [IonContent, CommonModule, FormsModule, IonItem,  IonInput, IonIcon, IonInputPasswordToggle, BtnPrimaryLoginPage, BtnSecundaryLoginPage]
 })
 export class LoginPage implements OnInit {
    email: string = '';
