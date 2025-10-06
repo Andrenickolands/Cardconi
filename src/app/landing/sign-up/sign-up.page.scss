@@ -1,0 +1,178 @@
+// ===== ESTILOS SCSS COMPLETO CORREGIDO =====
+// register.component.scss
+
+.register-container {
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #2a2a2a;
+  min-height: 100%;
+  padding-bottom: 40px; // Espacio al final
+
+  .register-title {
+    color: #e0e0e0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+
+  .input-container {
+    margin-bottom: 20px;
+
+    .custom-input {
+      --background: #3a3a3a;
+      --border-radius: 6px;
+      --padding-start: 16px;
+      --padding-end: 16px;
+      --min-height: 50px;
+      
+      border: 1px solid #4a4a4a;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+
+      &.invalid {
+        border-color: #ff4444;
+      }
+
+      &:hover {
+        border-color: #5a5a5a;
+      }
+
+      &.item-has-focus {
+        border-color: #666;
+        --background: #404040;
+      }
+
+      ion-icon {
+        color: #6a6a6a;
+        font-size: 22px;
+        margin-right: 12px;
+      }
+
+      .toggle-password {
+        cursor: pointer;
+        margin-left: 8px;
+        
+        &:hover {
+          color: #9a9a9a;
+        }
+      }
+
+      ion-input {
+        --color: #e0e0e0;
+        --placeholder-color: #6a6a6a;
+        --placeholder-opacity: 1;
+        font-size: 15px;
+      }
+
+      // Estilos para el input de teléfono
+      &.phone-input {
+        .phone-prefix {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin-right: 12px;
+          padding-right: 12px;
+          border-right: 1px solid #4a4a4a;
+
+          .flag {
+            font-size: 20px;
+          }
+
+          .code {
+            color: #e0e0e0;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .info-box {
+    background: #3a3a3a;
+    border: 1px solid #4a4a4a;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+
+    p {
+      color: #b0b0b0;
+      font-size: 13px;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    ion-checkbox {
+      --size: 20px;
+      --checkbox-background-checked: #7c4dff;
+      --border-color: #5a5a5a;
+      --border-color-checked: #7c4dff;
+      margin-right: 12px;
+    }
+
+    .checkbox-label {
+      color: #e0e0e0;
+      font-size: 14px;
+    }
+  }
+
+  .button-container {
+    margin-top: 30px;
+
+    .register-button {
+      --background: linear-gradient(180deg, #d4d4d4 0%, #a8a8a8 100%);
+      --background-hover: linear-gradient(180deg, #e0e0e0 0%, #b8b8b8 100%);
+      --background-activated: linear-gradient(180deg, #c0c0c0 0%, #959595 100%);
+      --border-radius: 8px;
+      --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      --color: #2a2a2a;
+      
+      height: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: none;
+
+      &:disabled {
+        --background: #4a4a4a;
+        --color: #6a6a6a;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .back-link {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 15px;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Estilos personalizados para el toast
+ion-toast.custom-toast {
+  --background: #ff4444;
+  --color: #ffffff;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  
+  &.toast-success {
+    --background: #4caf50;
+  }
+}

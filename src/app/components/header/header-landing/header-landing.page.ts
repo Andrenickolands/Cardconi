@@ -126,4 +126,7 @@ export class HeaderLandingPage implements OnInit {
     this.router.navigate(['/login']);
   }
 
+  goToRegister() {
+    this.router.navigate(['/sign-up']);
+  }
 }
