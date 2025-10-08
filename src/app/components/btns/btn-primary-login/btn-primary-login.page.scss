@@ -1,7 +1,7 @@
 .button-container {
   width: 100%;
-  max-width: 350px;
-  margin-top: 24px;
+  max-width: 418px;
+  min-height: 52px;
 
   .login-button {
     --background: linear-gradient(180deg, #d4d4d4 0%, #a8a8a8 100%);
@@ -11,7 +11,7 @@
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     --color: #2a2a2a;
     
-    height: 50px;
+    height: 52px;
     font-size: 16px;
     font-weight: 600;
     text-transform: none;
