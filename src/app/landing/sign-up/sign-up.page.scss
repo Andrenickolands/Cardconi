@@ -1,5 +1,3 @@
-// ===== ESTILOS SCSS COMPLETO CORREGIDO =====
-// register.component.scss
 
 .register-container {
   padding: 20px;
@@ -7,7 +5,7 @@
   margin: 0 auto;
   background: #2a2a2a;
   min-height: 100%;
-  padding-bottom: 40px; // Espacio al final
+  padding-bottom: 40px;
 
   .register-title {
     color: #e0e0e0;
@@ -90,6 +88,13 @@
     }
   }
 
+  .error-message {
+  color: var(--red-color);
+  font-size: 13px;
+  margin-top: 4px;
+  margin-left: 8px;
+}
+
   .info-box {
     background: #3a3a3a;
     border: 1px solid #4a4a4a;
@@ -141,7 +146,7 @@
       text-transform: none;
 
       &:disabled {
-        --background: #4a4a4a;
+        --background: var(--text-soft-dark-color);
         --color: #6a6a6a;
         opacity: 0.6;
       }

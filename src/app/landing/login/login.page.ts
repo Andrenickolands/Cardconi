@@ -20,6 +20,7 @@ import { ReviewCardPage } from "src/app/components/cards/review-card/review-card
 import { BtnCtaPage } from "src/app/components/btns/btn-cta/btn-cta.page";
 import { BtnPrimaryLoginPage } from "src/app/components/btns/btn-primary-login/btn-primary-login.page";
 import { BtnSecundaryLoginPage } from "src/app/components/btns/btn-secundary-login/btn-secundary-login.page";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -48,11 +49,12 @@ import { BtnSecundaryLoginPage } from "src/app/components/btns/btn-secundary-log
 })
 export class LoginPage implements OnInit {
 
+
   email: string = '';
   password: string = '';
   showPassword: boolean = false;
 
-  constructor(private toastController: ToastController) { }
+  constructor(private toastController: ToastController, private router: Router) { }
 
   ngOnInit() { }
 
@@ -78,6 +80,10 @@ export class LoginPage implements OnInit {
     } else {
       this.presentToast('No hay ningún usuario registrado aún', 'warning');
     }
+  }
+
+  goToRegister() {
+    this.router.navigate(['/sign-up']);
   }
 
 
