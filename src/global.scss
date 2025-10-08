@@ -142,9 +142,6 @@ h4 {
 h5 {
 }
 
-.custom-background {
-  --background: linear-gradient(0deg,rgba(28, 28, 28, 1) 57%, rgba(129, 129, 129, 1) 100%);
-}
 .text-menu {
   color: var(--text-header-color);
   text-align: center;
@@ -169,14 +166,12 @@ h5 {
   box-sizing: border-box;
 }
 
-
 /* Pantallas ultra anchas (1601px+) */
 @media (min-width: 1601px) {
 }
 
 /* Desktop grande (1401px - 1600px) */
 @media (min-width: 1401px) and (max-width: 1600px) {
-  
 }
 
 /* Desktop mediano (1201px - 1400px) */

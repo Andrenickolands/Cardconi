@@ -1,104 +1,163 @@
 .login-page {
+  .custom-background-dark {
+    background-image: url("../../../assets/media/login/background-dark.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
 
-    .name-app h2{
-        font-size: 4rem;
-        font-weight: bold;
-        color: var(--text-ligth-color);
-        text-align: center;
-        margin-top: 2.4rem;
+  .custom-background-dark-filter {
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .name-app h2 {
+    margin-top: 2rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(99, 99, 99, 0.25);
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: #000;
+    font-family: "Vollkorn SC";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    background: linear-gradient(90deg, #a9a9a9 0%, #959595 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .fields-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+
+  .email-input {
+    margin-top: 1rem;
+  }
+
+  .password-input {
+    margin-top: 0.6rem;
+  }
+
+  .input {
+    ion-input {
+      color: #6F6F6F;
+      font-family: "Markazi Text";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
     }
-    .fields-container{
-        gap: 1rem;
+
+    width: 100%;
+    max-width: 418px;
+    margin-bottom: 16px;
+
+    .custom-input {
+      --padding-start: 20px;
+      --padding-end: 20px;
+      --inner-padding-end: 0;
+      --min-height: 68px;
+      transition: all 0.3s ease;
+
+      --border-radius: 12px;
+      border-radius: 12px;
+
+      box-shadow: 1px 1px 2px 0 rgba(62, 62, 62, 0.3),
+        -1px -1px 2px 0 rgba(46, 46, 46, 0.5),
+        -3px 3px 6px 0 rgba(46, 46, 46, 0.2) inset,
+        3px -3px 6px 0 rgba(46, 46, 46, 0.2) inset,
+        -3px -3px 6px 0 rgba(62, 62, 62, 0.9) inset,
+        3px 3px 8px 0 rgba(46, 46, 46, 0.9) inset;
+
+      --background: #323232;
+
+      &:hover {
+        color: #5a5a5a;
+      }
+
+      &.item-has-focus {
+        border-color: #666;
+        --background: #404040;
+      }
+
+      ion-icon {
+        color: #6a6a6a;
+        font-size: 26px;
+        min-width: 26px;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin-top: 3.2rem;
-    }
+      }
 
-    .login-button, .register-button {
-        margin-top: 1.6rem;
-        width: 100%;
-        max-width: 350px;
-    }
+      .icon {
+        margin-right: 20px;
+      }
 
-    .icons-buttons{
+      .toggle-password {
+        color: #6a6a6a;
+        font-size: 26px;
+        cursor: pointer;
+        margin-left: 8px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #9a9a9a;
+        }
+      }
+
+      .icon-wrapper {
         display: flex;
-        justify-content: space-between;
-        gap: 1px;
-        margin-left: 3rem;
-    }
+        align-items: center;
+        margin-right: 20px;
 
-    .email-input,
-    .password-input {
-        ion-input {
-            --color: var(--text-soft-color);
-            --placeholder-color: var(--text-soft-color);
-            --placeholder-opacity: 1;
+        .mail-icon {
+          width: 26px;
+          height: 26px;
+          color: #6a6a6a;
+          stroke: #6a6a6a;
         }
-
-        width: 100%;
-        max-width: 350px;
-        margin-bottom: 16px;
-
-        .custom-email-input,
-        .custom-password-input {
-            --background: #3a3a3a;
-            --border-radius: 6px;
-            --padding-start: 16px;
-            --padding-end: 16px;
-            --inner-padding-end: 0;
-            --min-height: 50px;
-            border: 1px solid #4a4a4a;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-
-            &:hover {
-                border-color: #5a5a5a;
-            }
-
-            &.item-has-focus {
-                border-color: #666;
-                --background: #404040;
-            }
-
-            ion-icon {
-                color: #6a6a6a;
-                font-size: 22px;
-                margin-right: 12px;
-                min-width: 22px;
-                display: flex;
-                align-items: center;
-            }
-
-            .toggle-password {
-                color: #6a6a6a;
-                font-size: 22px;
-                cursor: pointer;
-                margin-left: 8px;
-                transition: color 0.3s ease;
-
-                &:hover {
-                    color: #9a9a9a;
-                }
-            }
-
-            .icon-wrapper {
-                display: flex;
-                align-items: center;
-                margin-right: 12px;
-
-                .mail-icon {
-                    width: 22px;
-                    height: 22px;
-                    color: #6a6a6a;
-                    stroke: #6a6a6a;
-                }
-            }
-        }
+      }
     }
-    .forget-password a {
-        text-decoration: none;
-        color: var(--text-ligth-color);
-    }
+  }
+
+  .login-button{
+    margin-top: 1.8rem;
+  }
+
+  .register-button{
+    margin-top: 1.8rem;
+  }
+
+  .login-button,
+  .register-button {
+    width: 100%;
+    max-width: 418px;
+  }
+
+  .icons-buttons {
+    display: flex;
+    margin-left: 3rem;
+  }
+
+  .forget-password{
+        margin-top: 1.6rem;
+  }
+
+  .forget-password a {
+    text-decoration: none;
+    color: var(--text-white-color);
+    text-align: center;
+    font-family: "Markazi Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
 }

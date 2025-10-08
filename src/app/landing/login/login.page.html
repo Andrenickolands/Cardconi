@@ -1,59 +1,57 @@
-<ion-content class="custom-background login-page">
+<ion-content class="login-page">
+  <div class="custom-background-dark ">
+    <div class="custom-background-dark-filter">
+      <div class="fields-container">
 
-  <div class="fields-container">
+        <!-- Título o nombre de la app -->
+        <div class="name-app">
+          <h2>Cardconi</h2>
+        </div>
 
-    <!-- Título o nombre de la app -->
-    <div class="name-app">
-      <h2>Cardconi</h2>
-    </div>
+        <!-- Campo de email -->
+        <div class="input email-input">
+          <ion-item class="custom-input" lines="none">
+            <ion-icon class="icon" name="mail-outline" slot="start"></ion-icon>
+            <ion-input type="email" placeholder="Escribe tu correo" [(ngModel)]="email" required>
+            </ion-input>
+          </ion-item>
+        </div>
 
-    <!-- Campo de email -->
-    <div class="email-input">
-      <ion-item class="custom-email-input" lines="none">
-        <ion-icon name="mail-outline" slot="start"></ion-icon>
-        <ion-input 
-          type="email" 
-          placeholder="Escribe tu correo" 
-          [(ngModel)]="email" 
-          required>
-        </ion-input>
-      </ion-item>
-    </div>
+        <!-- Campo de contraseña -->
+        <div class="input password-input">
+          <ion-item class="custom-input" lines="none">
+            <ion-icon class="icon" name="key-outline" slot="start"></ion-icon>
+            <ion-input [type]="showPassword ? 'text' : 'password'" placeholder="Escribe tu contraseña"
+              [(ngModel)]="password" required>
+            </ion-input>
+            <ion-icon [name]="showPassword ? 'eye-off-outline' : 'eye-outline'" slot="end" class="toggle-password"
+              (click)="togglePassword()">
+            </ion-icon>
+          </ion-item>
+        </div>
 
-    <!-- Campo de contraseña -->
-    <div class="password-input">
-      <ion-item class="custom-password-input" lines="none">
-        <ion-icon name="key-outline" slot="start"></ion-icon>
-        <ion-input 
-          [type]="showPassword ? 'text' : 'password'" 
-          placeholder="Escribe tu contraseña" 
-          [(ngModel)]="password" 
-          required>
-        </ion-input>
-        <ion-icon 
-          [name]="showPassword ? 'eye-off-outline' : 'eye-outline'" 
-          slot="end" 
-          class="toggle-password" 
-          (click)="togglePassword()">
-        </ion-icon>
-      </ion-item>
-    </div>
-    <div class="login-button">
-        <app-btn-primary-login></app-btn-primary-login>
-      
-    </div>
-    <div class="forget-password">
-      <a href="#">¿Olvidaste tu contraseña?</a>
-    </div>
-    <div class="register-button">
-      <app-btn-secundary-login></app-btn-secundary-login>
-    </div>
-    <div class="icons-buttons">
-      <img src="../../../../assets/media/generalIcons/google_icon.png" alt="Google" />
-      <img src="../../../../assets/media/generalIcons/face_icon.png" alt="Facebook" />
-      <img src="../../../../assets/media/generalIcons/apple_icon.png" alt="Apple" />
+
+        <div class="login-button">
+          <app-btn-primary-login></app-btn-primary-login>
+        </div>
+        
+        <div class="forget-password">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <div class="register-button">
+          <app-btn-secundary-login></app-btn-secundary-login>
+        </div>
+
+        <div class="icons-buttons">
+          <img src="../../../../assets/media/generalIcons/google_icon.png" alt="Google" />
+          <img src="../../../../assets/media/generalIcons/face_icon.png" alt="Facebook" />
+          <img src="../../../../assets/media/generalIcons/apple_icon.png" alt="Apple" />
+        </div>
+
+      </div>
+
     </div>
 
   </div>
-
 </ion-content>
