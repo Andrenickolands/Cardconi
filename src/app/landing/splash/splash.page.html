@@ -1,13 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>splash</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="splash-page">
+    <div class="title-container">
+      <h2 class="carconi-title">
+        <span *ngFor="let letter of letters; let i = index" class="letter" [style.animation-delay]="i * 0.1 + 's'">
+          {{ letter }}
+        </span>
+      </h2>
+      <div class="loader">
+     </div>
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">splash</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  </div>
 </ion-content>

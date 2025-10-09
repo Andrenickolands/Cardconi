@@ -1,6 +1,6 @@
 <ion-content class="login-page">
-  <div class="custom-background-dark ">
-    <div class="custom-background-dark-filter">
+  <div class="custom-background ">
+    <div class="custom-background">
       <div class="fields-container">
 
         <!-- Título o nombre de la app -->
@@ -31,7 +31,7 @@
         </div>
 
 
-        <div class="login-button">
+        <div class="login-button" (click)="login()">
           <app-btn-primary-login></app-btn-primary-login>
         </div>
 
@@ -39,7 +39,7 @@
           <a href="#">¿Olvidaste tu contraseña?</a>
         </div>
 
-        <div class="register-button">
+        <div class="register-button" (click)="goToRegister()">
           <app-btn-secundary-login></app-btn-secundary-login>
         </div>
 
@@ -50,35 +50,6 @@
         </div>
 
       </div>
-
-      <!-- Campo de contraseña -->
-      <div class="password-input">
-        <ion-item class="custom-password-input" lines="none">
-          <ion-icon name="key-outline" slot="start"></ion-icon>
-          <ion-input [type]="showPassword ? 'text' : 'password'" placeholder="Escribe tu contraseña"
-            [(ngModel)]="password" required>
-          </ion-input>
-          <ion-icon [name]="showPassword ? 'eye-off-outline' : 'eye-outline'" slot="end" class="toggle-password"
-            (click)="togglePassword()">
-          </ion-icon>
-        </ion-item>
-      </div>
-      <div class="login-button">
-        <app-btn-primary-login></app-btn-primary-login>
-
-      </div>
-      <div class="forget-password">
-        <a href="#">¿Olvidaste tu contraseña?</a>
-      </div>
-      <div class="register-button" (click)="goToRegister()">
-        <app-btn-secundary-login></app-btn-secundary-login>
-      </div>
-      <div class="icons-buttons">
-        <img src="../../../../assets/media/generalIcons/google_icon.png" alt="Google" />
-        <img src="../../../../assets/media/generalIcons/face_icon.png" alt="Facebook" />
-        <img src="../../../../assets/media/generalIcons/apple_icon.png" alt="Apple" />
-      </div>
-
     </div>
   </div>
 </ion-content>

@@ -50,17 +50,10 @@ export class SignUpPage implements OnInit {
   constructor(
     private router: Router,
     private fb: FormBuilder
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.initForm();
-
-    // 🔹 Cargar datos si existen en sessionStorage
-    const savedData = sessionStorage.getItem('userData');
-    if (savedData) {
-      this.registerForm.patchValue(JSON.parse(savedData));
-      console.log('Datos cargados desde sessionStorage:', JSON.parse(savedData));
-    }
   }
 
   initForm() {
@@ -158,30 +151,19 @@ export class SignUpPage implements OnInit {
         password: formData.password
       };
 
+      // Guardar en localStorage
+      localStorage.setItem('userData', JSON.stringify(userData));
+      console.log('Datos guardados en localStorage:', userData);
 
-      sessionStorage.setItem('userData', JSON.stringify(userData));
-      console.log('Datos guardados en sessionStorage:', userData);
-
-      
-
+      // Limpiar formulario
       this.registerForm.reset();
+
+      // Redirigir al login
+      this.router.navigate(['/login']);
     } else {
       Object.keys(this.registerForm.controls).forEach(key => {
         this.registerForm.get(key)?.markAsTouched();
       });
-
-      const firstErrorField = Object.keys(this.registerForm.controls).find(key => {
-        const control = this.registerForm.get(key);
-        return control && control.invalid;
-      });
-
-      if (firstErrorField) {
-        const errorMessage = this.getErrorMessage(firstErrorField);
-      }
-
-      if (this.registerForm.errors?.['passwordMismatch']) {
-
-      }
     }
   }
 }
