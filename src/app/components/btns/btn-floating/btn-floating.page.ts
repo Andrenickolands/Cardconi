@@ -20,7 +20,7 @@ export class BtnFloatingPage implements OnInit, OnDestroy {
   private hideMessageTimeout: any;
 
   // Número de WhatsApp 
-  phoneNumber = '573001234567'; 
+  phoneNumber = '573006380397'; 
   message = 'Hola, necesito ayuda'; 
 
   // Configuración del mensaje inicial

@@ -9,10 +9,8 @@
   z-index: 999999;
 
   .container-text-flo {
-    padding: 20px 12px;
     min-width: 140px;
-    max-width: 277px;
-    height: 40px;
+    height: auto;
     flex-shrink: 0;
 
     background-color: #d9d9d9;
@@ -42,6 +40,7 @@
       font-weight: 700;
       line-height: normal;
       letter-spacing: 0.72px;
+      padding: 12px 20px;
     }
 
     .svg-text-flo {

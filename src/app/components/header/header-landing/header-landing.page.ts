@@ -18,6 +18,10 @@ export class HeaderLandingPage implements OnInit {
   @Input() nombreApp: string = 'Cardconi';
   @Input() ubicacion: string = 'Bogotá, Colombia';
 
+  // Número de WhatsApp 
+  phoneNumber = '573006380397'; 
+  message = 'Hola, necesito ayuda'; 
+
   usuarioActual: Usuario | null = null;
 
   constructor(
@@ -71,4 +75,11 @@ export class HeaderLandingPage implements OnInit {
 
   goToLogin() { this.router.navigate(['/login']); }
   goToRegister() { this.router.navigate(['/sign-up']); }
+
+  openWhatsApp(): void {
+    const encodedMessage = encodeURIComponent(this.message);
+    const whatsappUrl = `https://wa.me/${this.phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  }
+
 }
