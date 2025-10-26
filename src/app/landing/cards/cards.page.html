@@ -1,13 +1,69 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>cards</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header-landing></app-header-landing>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cards</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="cards-page">
+  <!-- Grid de productos -->
+  <div class="products-container">
+    <ion-card *ngFor="let product of products" class="product-card">
+      
+      <!-- Imagen del producto -->
+      <img [src]="product.image" [alt]="product.name" class="product-image" />
+      
+      <ion-card-header>
+        <ion-card-title class="name_card">{{ product.name }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Descripción -->
+        <p class="product-description" >{{ product.description }}</p>
+        
+        <!-- Precio -->
+        <p class="product-price">${{ product.price | number:'1.2-2' }}</p>
+
+        <!-- Control de cantidad -->
+        <div class="quantity-control">
+          <ion-button 
+            fill="clear" 
+            size="small"
+            (click)="decreaseQuantity(product.id)"
+            [disabled]="selectedQuantities[product.id] <= 1">
+            <ion-icon slot="icon-only" name="remove"></ion-icon>
+          </ion-button>
+          
+          <span class="quantity-display">{{ selectedQuantities[product.id] }}</span>
+          
+          <ion-button 
+            fill="clear" 
+            size="small"
+            (click)="increaseQuantity(product.id)"
+            [disabled]="selectedQuantities[product.id] >= product.stock">
+            <ion-icon slot="icon-only" name="add"></ion-icon>
+          </ion-button>
+        </div>
+
+        <!-- Selector de color -->
+        <ion-item lines="none">
+          <ion-label>Seleccionar color</ion-label>
+          <ion-select 
+            [(ngModel)]="selectedColors[product.id]"
+            interface="popover"
+            placeholder="Elige un color">
+            <ion-select-option 
+              *ngFor="let color of product.availableColors" 
+              [value]="color">
+              {{ color }}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Botón agregar al carrito -->
+        <ion-button 
+          expand="block" 
+          (click)="addToCart(product)"
+          class="add-to-cart-btn">
+          <ion-icon slot="start"></ion-icon>
+          Agregar al carrito
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
