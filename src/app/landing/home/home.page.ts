@@ -8,13 +8,14 @@ import { FooterLandingPage } from "src/app/components/footer/footer-landing/foot
 import { BtnCartPage } from "src/app/components/btns/btn-cart/btn-cart.page";
 import { ReviewCardPage } from "src/app/components/cards/review-card/review-card.page";
 import { BtnPrimaryLoginPage } from "src/app/components/btns/btn-primary-login/btn-primary-login.page";
+import { BtnFloatingPage } from 'src/app/components/btns/btn-floating/btn-floating.page';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonContent, CommonModule, FormsModule, HeaderLandingPage, BtnCtaPage, FooterLandingPage, BtnCartPage, IonAccordion, ReviewCardPage, BtnPrimaryLoginPage]
+  imports: [IonContent, CommonModule, FormsModule, HeaderLandingPage, BtnCtaPage, FooterLandingPage, BtnCartPage, IonAccordion, ReviewCardPage, BtnPrimaryLoginPage, BtnFloatingPage]
 })
 export class HomePage implements OnInit {
   scrollProgress: number = 0;

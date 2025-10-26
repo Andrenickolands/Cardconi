@@ -1,41 +1,25 @@
-
 .cards-page {
   padding: 16px;
   background-color: var(--ion-color-light-shade);
   ion-button {
-    background: linear-gradient(to bottom, #E0E0E0, #C0C0C0, #A0A0A0);
+    background: linear-gradient(to bottom, #e0e0e0, #c0c0c0, #a0a0a0);
     --color: var(--text-color);
     font-weight: bold;
     border-radius: 0.5rem;
   }
-  .add-to-cart-btn{
+  .add-to-cart-btn {
     --background-color: red;
     --color: var(--text-white-color);
   }
 }
 
-.name-card {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--ion-color-dark);
-  font-family:'Work Sans';
-  margin-bottom: 8px;
-}
-ion-card-content .product-description{
-    font-family: 'Work Sans';
-   color: var(--text-color);
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.quantity-control{
-    font-family: 'Work Sans';
-   color: var(--text-color);
-}
-.products-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
 .product-card {
-    padding: 2rem;
+  padding: 2rem;
   margin: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -44,6 +28,23 @@ ion-card-content .product-description{
     transform: translateY(-4px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   }
+}
+
+.name-card {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--ion-color-dark);
+  font-family: "Work Sans";
+  margin-bottom: 8px;
+}
+ion-card-content .product-description {
+  font-family: "Work Sans";
+  color: var(--text-color);
+}
+
+.quantity-control {
+  font-family: "Work Sans";
+  color: var(--text-color);
 }
 
 .product-image {

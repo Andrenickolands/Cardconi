@@ -1,12 +1,21 @@
 <div class="container-btn-flo">
-  <div class="container-text-flo">
+  <div 
+    class="container-text-flo" 
+    [class.show]="showMessage"
+    (mouseenter)="onTextMouseEnter()"
+    (mouseleave)="onTextMouseLeave()">
     <span class="text-flo">{{ text }}</span>
     <div class="svg-text-flo">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="21" viewBox="0 0 12 21" fill="none">
-        <path d="M0 9.17273C0 9.17273 10 0 11.5 0C12.5 0 12 27.2576 8.5 18.2152C5 9.17274 0 9.17273 0 9.17273Z"
-          fill="#D9D9D9" />
-      </svg>
+      <img src="../../../../assets/media/generalIcons/svg-text-span.svg" alt="svg-text-span" />
     </div>
   </div>
-  <ion-button class="btn-flo" name="icon-whatsapp" slot="icon-only"></ion-button>
+
+  <button 
+    class="btn-flo" 
+    name="icon-whatsapp"
+    (click)="openWhatsApp()"
+    (mouseenter)="onButtonMouseEnter()"
+    (mouseleave)="onButtonMouseLeave()">
+    <img src="../../../../assets/media/generalIcons/icon-whatsapp.svg" alt="icon-whatsapp" />
+  </button>
 </div>
