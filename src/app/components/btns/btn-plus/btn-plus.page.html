@@ -1,9 +1,14 @@
-<div class="container-funtion-plus">
-  <div class="container-btn-plus">
-    <ion-button class="btn-plus" name="plus" slot="icon-only"></ion-button>
-  </div>
-  <span class="number-plus">{{ cant }}</span>
-  <div class="container-btn-plus">
-    <ion-button class="btn-plus" name="minus" slot="icon-only"></ion-button>
-  </div>
+<!-- Control de cantidad -->
+<div class="quantity-control">
+  <ion-button fill="clear" size="small" (click)="decreaseQuantity(product.id)"
+    [disabled]="selectedQuantities[product.id] <= 1">
+    <img class="icon" src="../../../../assets/media/cards/minus-icon.svg" name="remove" />
+  </ion-button>
+
+  <span class="quantity-display">{{ selectedQuantities[product.id] }}</span>
+
+  <ion-button fill="clear" size="small" (click)="increaseQuantity(product.id)"
+    [disabled]="selectedQuantities[product.id] >= product.stock">
+    <img class="icon" src="../../../../assets/media/cards/plus-icon.svg" name="add" />
+  </ion-button>
 </div>

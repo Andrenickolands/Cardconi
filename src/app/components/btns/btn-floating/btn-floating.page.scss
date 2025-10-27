@@ -73,6 +73,10 @@
       4px 6px 12px 4px rgba(16, 16, 16, 0.25);
   }
 
+  .btn-flo:active {
+    transform: scale(0.96);
+  }
+
   .btn-flo svg {
     width: 36px;
     height: 36px;

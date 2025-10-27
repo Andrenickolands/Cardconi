@@ -28,6 +28,11 @@
   --background: linear-gradient(130deg, #fff2e0 -27.66%, #cae4b4 165.06%);
 }
 
+.btn-cta:active {
+  transform: scale(0.98);
+}
+
+
 /* Pantallas ultra anchas (1601px+) */
 @media (min-width: 1601px) {
 }

@@ -1,78 +1,47 @@
-.container-funtion-plus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 28px;
-}
-
-.container-btn-plus {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-
+.quantity-control {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: left;
+  gap: 14px;
+  margin-top: 1.4rem;
 
-.btn-plus {
-  border-radius: 12px;
-  background: radial-gradient(
-    77.98% 110.3% at 17.62% 34.98%,
-    rgba(250, 235, 215, 0.5) 0%,
-    rgba(148, 139, 127, 0.5) 100%
-  );
-}
+  background-color: transparent;
 
-.btn-plus:active {
-  border-radius: 12px;
-  background: radial-gradient(
-    77.98% 110.3% at 17.62% 34.98%,
-    rgba(250, 235, 215, 0.8) 0%,
-    rgba(148, 139, 127, 0.8) 100%
-  );
-}
+  ion-button {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin: 0;
+    border-radius: 12px;
+    background: radial-gradient(
+      77.98% 110.3% at 17.62% 34.98%,
+      rgba(250, 235, 215, 0.5) 0%,
+      rgba(148, 139, 127, 0.5) 100%
+    );
+    color: var(--icon-color);
 
-.number-plus {
-  color: var(--text-soft-color);
-  text-align: center;
-  font-family: "Work Sans";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.96px;
-}
+    // Aplicar hover al contenedor
+    &:active {
+      transform: scale(0.96);
+    }
+  }
 
-/* Pantallas ultra anchas (1601px+) */
-@media (min-width: 1601px) {
-}
+  .quantity-display {
+    min-width: 40px;
+    color: var(--text-soft-color, #818181);
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.96px;
 
-/* Desktop grande (1201px - 1600px) */
-@media (min-width: 1201px) and (max-width: 1600px) {
-}
-
-/* Desktop pequeño (1025px - 1200px) */
-@media (min-width: 1025px) and (max-width: 1200px) {
-}
-
-/* Para dispositivos táctiles - eliminar hover en móviles */
-@media (hover: none) and (pointer: coarse) {
-}
-
-/* Tablet (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-}
-
-/* Mobile mediano (480px - 768px) */
-@media (min-width: 480px) and (max-width: 768px) {
-}
-
-/* Mobile pequeño (360px - 479px) */
-@media (min-width: 360px) and (max-width: 479px) {
-}
-
-/* Mobile extra pequeño (320px - 359px) */
-@media (max-width: 359px) {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    pointer-events: auto;
+  }
 }

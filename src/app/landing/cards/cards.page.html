@@ -2,6 +2,38 @@
 
 <ion-content [fullscreen]="true" class="cards-page">
   <div class="container">
+
+    <!-- botones superiores -->
+    <div class="container-btns-superiores">
+      <div class="container-principal-btns">
+        <div class="container-btn-type-card">
+          <div class="container-btn-terciary">
+            <button class="btn-terciary">Bancaría</button>
+          </div>
+
+          <div class="container-btn-terciary">
+            <button class="btn-terciary">Presentación</button>
+          </div>
+
+          <div class="container-btn-terciary">
+            <button class="btn-terciary">Personalizada</button>
+          </div>
+        </div>
+
+        <div class="container-btn-cart">
+          <button class="btn-cart" name="cart-btn" (click)="goToCart()">
+            <img class="icon" src="../../../../assets/media/cards/cart_duotone.svg" name="cart-icon" />
+          </button>
+          <!-- <div class="container-number-cart"><span class="number-cart">0</span></div> -->
+        </div>
+
+      </div>
+
+      <div class="container-filter">
+
+      </div>
+    </div>
+
     <!-- Grid de productos -->
     <div class="products-container">
       <ion-card *ngFor="let product of products" class="product-card">
@@ -26,26 +58,28 @@
             <div class="quantity-control">
               <ion-button fill="clear" size="small" (click)="decreaseQuantity(product.id)"
                 [disabled]="selectedQuantities[product.id] <= 1">
-                <ion-icon slot="icon-only" name="remove"></ion-icon>
+                <img class="icon" src="../../../../assets/media/cards/minus-icon.svg" name="remove" />
               </ion-button>
 
               <span class="quantity-display">{{ selectedQuantities[product.id] }}</span>
 
               <ion-button fill="clear" size="small" (click)="increaseQuantity(product.id)"
                 [disabled]="selectedQuantities[product.id] >= product.stock">
-                <ion-icon slot="icon-only" name="add"></ion-icon>
+                <img class="icon" src="../../../../assets/media/cards/plus-icon.svg" name="add" />
               </ion-button>
             </div>
 
             <!-- Selector de color -->
-            <ion-item lines="none">
-              <ion-label>Seleccionar color</ion-label>
-              <ion-select [(ngModel)]="selectedColors[product.id]" interface="popover" placeholder="Elige un color">
-                <ion-select-option *ngFor="let color of product.availableColors" [value]="color">
-                  {{ color }}
-                </ion-select-option>
-              </ion-select>
-            </ion-item>
+            <div class="container-select-color">
+              <ion-item lines="none" class="select-color">
+                <ion-label>Seleccionar color</ion-label>
+                <ion-select [(ngModel)]="selectedColors[product.id]" interface="popover" placeholder="Elige un color">
+                  <ion-select-option *ngFor="let color of product.availableColors" [value]="color">
+                    {{ color }}
+                  </ion-select-option>
+                </ion-select>
+              </ion-item>
+            </div>
 
             <!-- Botón agregar al carrito -->
             <app-btn-primary class="add-to-cart-btn" (click)="addToCart(product)"></app-btn-primary>
@@ -53,6 +87,11 @@
           </ion-card-content>
         </div>
       </ion-card>
+    </div>
+
+    <!-- Botón ver más -->
+    <div class="container-btn-see-more">
+      <app-btn-see-more></app-btn-see-more>
     </div>
   </div>
 </ion-content>

@@ -91,4 +91,8 @@ export const routes: Routes = [
     path: '**',
     redirectTo: '/404'
   },
+  {
+    path: 'btn-see-more',
+    loadComponent: () => import('./components/btns/btn-see-more/btn-see-more.page').then( m => m.BtnSeeMorePage)
+  },
 ];

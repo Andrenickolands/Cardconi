@@ -26,6 +26,10 @@
     background: #ffcb53;
     filter: blur(6px);
   }
+
+  &:active {
+    transform: scale(1.02);
+  }
 }
 
 .btn-primary {
@@ -64,7 +68,7 @@
   height: 60%;
   flex-shrink: 0;
 
-  top: 44%;
+  top: 46%;
   right: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

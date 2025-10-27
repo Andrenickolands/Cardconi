@@ -6,6 +6,7 @@ import { HeaderLandingPage } from "src/app/components/header/header-landing/head
 import { BtnCtaPage } from "src/app/components/btns/btn-cta/btn-cta.page";
 import { FooterLandingPage } from "src/app/components/footer/footer-landing/footer-landing.page";
 import { BtnCartPage } from "src/app/components/btns/btn-cart/btn-cart.page";
+import { Router } from '@angular/router';
 import { ReviewCardPage } from "src/app/components/cards/review-card/review-card.page";
 import { BtnPrimaryLoginPage } from "src/app/components/btns/btn-primary-login/btn-primary-login.page";
 import { BtnFloatingPage } from 'src/app/components/btns/btn-floating/btn-floating.page';
@@ -21,7 +22,9 @@ export class HomePage implements OnInit {
   scrollProgress: number = 0;
   cardsHovered: boolean[] = [false, false];
 
-  constructor() { }
+  constructor(private router: Router) {
+    
+   }
 
   ngOnInit() {
   }
@@ -37,7 +40,7 @@ export class HomePage implements OnInit {
   }
 
   gotToCards(){
-  
+    this.router.navigate(['/cards']);
   }
 
 }

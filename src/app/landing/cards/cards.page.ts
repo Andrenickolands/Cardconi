@@ -19,6 +19,8 @@ import { IonContent, IonHeader, IonTitle, IonCard, IonToolbar,
   ToastController
 } from '@ionic/angular/standalone';
 import { BtnPrimaryPage } from 'src/app/components/btns/btn-primary/btn-primary.page';
+import { BtnSeeMorePage } from 'src/app/components/btns/btn-see-more/btn-see-more.page';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -42,7 +44,7 @@ import { BtnPrimaryPage } from 'src/app/components/btns/btn-primary/btn-primary.
     IonLabel,
     IonItem,
     CommonModule, 
-    FormsModule, BtnPrimaryPage]
+    FormsModule, BtnPrimaryPage, BtnSeeMorePage]
 })
 export class CardsPage implements OnInit {
 
@@ -85,7 +87,8 @@ export class CardsPage implements OnInit {
 
   constructor(
     private cartService: CartService,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private router: Router
   ) {
     // Registrar los íconos de Ionic
     addIcons({ add, remove, cart });
@@ -158,5 +161,9 @@ export class CardsPage implements OnInit {
       color: color
     });
     toast.present();
+  }
+
+  async goToCart(){
+    this.router.navigate(['/cart']);
   }
 }

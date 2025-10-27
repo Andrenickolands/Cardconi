@@ -26,6 +26,10 @@
     background: #0b0b0b;
     filter: blur(6px);
   }
+
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 .btn-secundary-login {

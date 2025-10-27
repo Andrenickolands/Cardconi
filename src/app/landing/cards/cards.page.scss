@@ -1,15 +1,150 @@
 .cards-page {
-  padding: 16px;
+  padding: 16px 16px 24px 16px;
+}
 
-  ion-button {
-    background: linear-gradient(to bottom, #e0e0e0, #c0c0c0, #a0a0a0);
-    --color: var(--text-color);
-    font-weight: bold;
-    border-radius: 0.5rem;
+.container-btns-superiores {
+  margin-top: 2.6rem;
+  width: 100%;
+  padding: 0 132px;
+
+  .container-principal-btns {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .container-btn-type-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 2.8rem;
+      flex-shrink: 0;
+
+      .container-btn-terciary {
+        width: 240px;
+        height: auto;
+        flex-shrink: 0;
+
+        .btn-terciary {
+          width: 100%;
+          height: 46px;
+          flex: 1;
+
+          border-radius: 12px;
+          border: 1.7px solid rgba(232, 232, 232, 0.4);
+          background: linear-gradient(
+            110deg,
+            rgba(255, 255, 255, 0.36) 0.2%,
+            rgba(217, 217, 217, 0.12) 101.11%
+          );
+          box-shadow: 23px 23px 34px 0 rgba(0, 0, 0, 0.05);
+          backdrop-filter: blur(26px);
+
+          color: var(--text-color, #2f2f2f);
+          text-align: center;
+          font-family: "Markazi Text";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: capitalize;
+
+          &:hover {
+            transform: scale(1.02);
+            border-radius: 12px;
+            background: radial-gradient(
+              77.98% 110.3% at 17.62% 34.98%,
+              rgba(250, 235, 215, 0.4) 0%,
+              rgba(148, 139, 127, 0.4) 100%
+            );
+          }
+
+          &:active {
+            transform: scale(0.99);
+            background: radial-gradient(
+              77.98% 110.3% at 17.62% 34.98%,
+              rgba(250, 235, 215, 0.7) 0%,
+              rgba(148, 139, 127, 0.7) 100%
+            );
+          }
+        }
+      }
+    }
+
+    .container-btn-cart {
+      position: relative;
+      width: 80px;
+      height: auto;
+      flex-shrink: 0;
+
+      .btn-cart {
+        width: 100%;
+        height: 46px;
+        flex: 1;
+
+        border-radius: 14px;
+        border: 1.7px solid rgba(232, 232, 232, 0.4);
+        background: linear-gradient(
+          110deg,
+          rgba(255, 255, 255, 0.36) 0.2%,
+          rgba(217, 217, 217, 0.12) 101.11%
+        );
+        box-shadow: 23px 23px 34px 0 rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(26px);
+        transition: all 0.2s ease;
+
+        &:hover {
+          transform: scale(1.04);
+          background: radial-gradient(
+            77.98% 110.3% at 17.62% 34.98%,
+            rgba(250, 235, 215, 0.4) 0%,
+            rgba(148, 139, 127, 0.4) 100%
+          );
+        }
+
+        &:active {
+          transform: scale(0.99);
+          border-radius: 12px;
+          background: radial-gradient(
+            77.98% 110.3% at 17.62% 34.98%,
+            rgba(250, 235, 215, 0.7) 0%,
+            rgba(148, 139, 127, 0.7) 100%
+          );
+        }
+      }
+
+      .container-number-cart {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        border-radius: 100%;
+
+        background-color: var(--secundary-color);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .number-cart::before {
+          color: var(--text-color);
+          text-align: center;
+          font-family: "Work Sans";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 0.56px;
+        }
+      }
+    }
   }
-  .add-to-cart-btn {
-    --background-color: red;
-    --color: var(--text-white-color);
+  .container-filter {
   }
 }
 
@@ -17,6 +152,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
+  margin-top: 3rem;
 
   .product-card {
     max-width: 360px;
@@ -38,7 +174,7 @@
     transition: transform 0.2s, box-shadow 0.2s;
 
     &:hover {
-      transform: translateY(-4px);
+      transform: translateY(-2px);
       box-shadow: 12px 22px 34px 0 rgba(190, 176, 158, 0.36);
     }
 
@@ -53,6 +189,7 @@
     ion-card-content {
       padding: 0;
     }
+
     .content-text-card {
       padding: 12px 12px 24px 12px;
 
@@ -112,46 +249,132 @@
         }
       }
     }
+
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 14px;
+      margin-top: 1.4rem;
+
+      background-color: transparent;
+
+      ion-button {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        margin: 0;
+        border-radius: 12px;
+        background: radial-gradient(
+          77.98% 110.3% at 17.62% 34.98%,
+          rgba(250, 235, 215, 0.5) 0%,
+          rgba(148, 139, 127, 0.5) 100%
+        );
+        color: var(--icon-color);
+
+        // Aplicar hover al contenedor
+        &:active {
+          transform: scale(0.96);
+        }
+      }
+
+      .quantity-display {
+        min-width: 40px;
+        color: var(--text-soft-color, #818181);
+        text-align: center;
+        font-family: "Work Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.96px;
+
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-touch-callout: none; /* iOS Safari */
+        pointer-events: auto;
+      }
+    }
+
+    .container-select-color {
+      position: relative;
+      width: 100%;
+      height: auto;
+      flex-shrink: 0;
+
+      .select-color {
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        --border-radius: 12px;
+        --background: var(--background-ligth-white-color, #f7f7f7);
+
+        color: var(--text-soft-color, #818181);
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.64px;
+      }
+
+      ion-item {
+        --padding-start: 10px;
+        --inner-padding-end: 14px;
+        gap: 2rem;
+        margin: 12px 0;
+
+        &:hover {
+          --color: var(--text-soft-color, #818181);
+          --background: var(--background-ligth-white-color, #f7f7f7);
+        }
+      }
+    }
   }
-}
-
-.quantity-control {
-  font-family: "Work Sans";
-  color: var(--text-color);
-  background-color: transparent;
-}
-
-.quantity-control {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  gap: 14px;
-  border-radius: 8px;
-  margin-top: 1.4rem;
-
-  ion-button {
-    margin: 0;
-  }
-
-  .quantity-display {
-    min-width: 40px;
-    color: var(--text-soft-color, #818181);
-    text-align: center;
-    font-family: "Work Sans";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.96px;
-  }
-}
-
-ion-item {
-  --padding-start: 0;
-  --inner-padding-end: 0;
-  margin: 12px 0;
 }
 
 .add-to-cart-btn {
   margin-top: 16px;
+}
+
+.container-btn-see-more {
+  margin-top: 4.2rem;
+  padding-bottom: 4rem;
+}
+
+/* Pantallas ultra anchas (1601px+) */
+@media (min-width: 1601px) {
+}
+
+/* Desktop grande (1201px - 1600px) */
+@media (min-width: 1201px) and (max-width: 1600px) {
+}
+
+/* Desktop pequeño (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* Para dispositivos táctiles - eliminar hover en móviles */
+@media (hover: none) and (pointer: coarse) {
+}
+
+/* Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Mobile mediano (480px - 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+}
+
+/* Mobile pequeño (360px - 479px) */
+@media (min-width: 360px) and (max-width: 479px) {
+}
+
+/* Mobile extra pequeño (320px - 359px) */
+@media (max-width: 359px) {
 }
