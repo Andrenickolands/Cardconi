@@ -18,6 +18,7 @@ import { IonContent, IonHeader, IonTitle, IonCard, IonToolbar,
   IonItem,
   ToastController
 } from '@ionic/angular/standalone';
+import { BtnPrimaryPage } from 'src/app/components/btns/btn-primary/btn-primary.page';
 
 
 @Component({
@@ -41,7 +42,7 @@ import { IonContent, IonHeader, IonTitle, IonCard, IonToolbar,
     IonLabel,
     IonItem,
     CommonModule, 
-    FormsModule]
+    FormsModule, BtnPrimaryPage]
 })
 export class CardsPage implements OnInit {
 

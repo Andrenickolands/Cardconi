@@ -1,26 +1,114 @@
-.register-button {
-    --background: #4a4a4a;
-    --background-hover: #5a5a5a;
-    --background-activated: #3a3a3a;
-    --border-radius: 8px;
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    --color: #e0e0e0;
-    
-    height: 50px;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: none;
-    letter-spacing: 0.3px;
-    
-    border: 1px solid #5a5a5a;
-    transition: all 0.3s ease;
+.button-container {
+  position: relative;
 
-    &:hover {
-      --background: #5a5a5a;
-      border-color: #6a6a6a;
-    }
+  width: 418px;
+  height: auto;
+  flex-shrink: 0;
 
-    &:active {
-      --background: #3a3a3a;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  pointer-events: auto;
+
+  // Aplicar hover al contenedor
+  &:hover .btn-secundary-background {
+    background: #151515;
+    filter: blur(6px);
   }
+
+  &:active .btn-secundary-background {
+    background: #0b0b0b;
+    filter: blur(6px);
+  }
+}
+
+.btn-secundary-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 60px;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  border-radius: 10px;
+  border: 1.7px solid rgba(232, 232, 232, 0.4);
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.36) 0.2%,
+    rgba(217, 217, 217, 0.12) 101.11%
+  );
+  box-shadow: 23px 23px 34px 0 rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(26px);
+
+  z-index: 2;
+
+  color: var(--text-white-color, #fbf9f6);
+  text-align: center;
+  font-family: "Markazi Text";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.btn-secundary-background {
+  position: absolute;
+  width: 88%;
+  height: 60%;
+  flex-shrink: 0;
+
+  top: 40%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 10px;
+  background: var(--text-color, #2f2f2f);
+  filter: blur(6px);
+
+  transition: background 0.3s ease; // Transición suave
+  pointer-events: none; // No interfiere con los clicks
+
+  z-index: 1;
+}
+
+/* Pantallas ultra anchas (1601px+) */
+@media (min-width: 1601px) {
+}
+
+/* Desktop grande (1201px - 1600px) */
+@media (min-width: 1201px) and (max-width: 1600px) {
+}
+
+/* Desktop pequeño (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* Para dispositivos táctiles - eliminar hover en móviles */
+@media (hover: none) and (pointer: coarse) {
+}
+
+/* Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Mobile mediano (480px - 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+}
+
+/* Mobile pequeño (360px - 479px) */
+@media (min-width: 360px) and (max-width: 479px) {
+}
+
+/* Mobile extra pequeño (320px - 359px) */
+@media (max-width: 359px) {
+}

@@ -1,41 +1,114 @@
 .button-container {
-  width: 100%;
-  max-width: 418px;
-  min-height: 52px;
+  position: relative;
 
-  .login-button {
-    --background: linear-gradient(180deg, #d4d4d4 0%, #a8a8a8 100%);
-    --background-hover: linear-gradient(180deg, #e0e0e0 0%, #b8b8b8 100%);
-    --background-activated: linear-gradient(180deg, #c0c0c0 0%, #959595 100%);
-    --border-radius: 8px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    --color: #2a2a2a;
-    
-    height: 52px;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: none;
-    letter-spacing: 0.3px;
-    position: relative;
+  width: 418px;
+  height: auto;
+  flex-shrink: 0;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      border-radius: 8px;
-      z-index: -1;
-    }
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  pointer-events: auto;
 
-    &:hover {
-      --background: linear-gradient(180deg, #e0e0e0 0%, #b8b8b8 100%);
-    }
-
-    &:active {
-      --background: linear-gradient(180deg, #c0c0c0 0%, #959595 100%);
-    }
+  // Aplicar hover al contenedor
+  &:hover .btn-primary-background {
+    background: #fff7eb;
+    filter: blur(6px);
   }
+
+  &:active .btn-primary-background {
+    background: #fff;
+    filter: blur(6px);
+  }
+}
+
+.btn-primary-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 60px;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  border-radius: 10px;
+  border: 1.7px solid rgba(232, 232, 232, 0.4);
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.36) 0.2%,
+    rgba(217, 217, 217, 0.12) 101.11%
+  );
+  box-shadow: 23px 23px 34px 0 rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(26px);
+
+  z-index: 2;
+
+  color: var(--text-color, #2f2f2f);
+  text-align: center;
+  font-family: "Markazi Text";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.btn-primary-background {
+  position: absolute;
+  width: 88%;
+  height: 60%;
+  flex-shrink: 0;
+
+  top: 40%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 10px;
+  background: #e2e2e2;
+  filter: blur(2px);
+
+  transition: background 0.3s ease; // Transición suave
+  pointer-events: none; // No interfiere con los clicks
+
+  z-index: 1;
+}
+
+/* Pantallas ultra anchas (1601px+) */
+@media (min-width: 1601px) {
+}
+
+/* Desktop grande (1201px - 1600px) */
+@media (min-width: 1201px) and (max-width: 1600px) {
+}
+
+/* Desktop pequeño (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* Para dispositivos táctiles - eliminar hover en móviles */
+@media (hover: none) and (pointer: coarse) {
+}
+
+/* Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Mobile mediano (480px - 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+}
+
+/* Mobile pequeño (360px - 479px) */
+@media (min-width: 360px) and (max-width: 479px) {
+}
+
+/* Mobile extra pequeño (320px - 359px) */
+@media (max-width: 359px) {
 }

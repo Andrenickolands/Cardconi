@@ -125,21 +125,24 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  gap: 8px;
-  margin: 16px 0;
+  gap: 14px;
   border-radius: 8px;
+  margin-top: 1.4rem;
 
   ion-button {
-    --padding-start: 8px;
-    --padding-end: 8px;
     margin: 0;
   }
 
   .quantity-display {
     min-width: 40px;
+    color: var(--text-soft-color, #818181);
     text-align: center;
-    font-size: 18px;
-    font-weight: 600;
+    font-family: "Work Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.96px;
   }
 }
 
@@ -151,6 +154,4 @@ ion-item {
 
 .add-to-cart-btn {
   margin-top: 16px;
-  --border-radius: 8px;
-  font-weight: 600;
 }

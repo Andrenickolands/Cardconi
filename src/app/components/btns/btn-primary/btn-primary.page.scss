@@ -1,63 +1,82 @@
-.container-btn-primary {
-  width: 312px;
-  height: 40px;
-  max-width: 312px;
-  min-width: 180px;
+.button-container {
+  position: absolute;
+
+  width: 100%;
+  height: auto;
   flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  pointer-events: auto;
+
+  // Aplicar hover al contenedor
+  &:hover .btn-primary-background {
+    background: #ffc165;
+    filter: blur(6px);
+  }
+
+  &:active .btn-primary-background {
+    background: #ffcb53;
+    filter: blur(6px);
+  }
 }
 
 .btn-primary {
-  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
+  flex: 1;
+  border-radius: 10px;
+
+  border-radius: 10px;
+  border: 1.7px solid rgba(232, 232, 232, 0.4);
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.36) 0.2%,
+    rgba(217, 217, 217, 0.12) 101.11%
+  );
+  box-shadow: 23px 23px 34px 0 rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(26px);
+
+  z-index: 2;
+
+  color: var(--text-color, #2f2f2f);
   text-align: center;
   font-family: "Markazi Text";
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 10px;
-  border: 1.699px solid rgba(232, 232, 232, 0.4);
-  background: linear-gradient(
-    110deg,
-    rgba(255, 255, 255, 0.36) 0.2%,
-    rgba(217, 217, 217, 0.12) 101.11%
-  );
-  box-shadow: 22.97px 22.97px 33.981px 0 rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(25.486021041870117px);
-
-  z-index: 2;
 }
 
 .btn-primary-background {
-  width: 272px;
-  height: 32px;
+  position: absolute;
+  width: 88%;
+  height: 60%;
   flex-shrink: 0;
 
-  display: flex;
-  justify-content: top;
-  align-items: center;
+  top: 44%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  border-radius: 10px;
-  background: #e2e2e2;
-  filter: blur(2px);
-  
+  border-radius: 4px;
+  background: #d6d6d6;
+  filter: blur(6px);
+
+  transition: background 0.3s ease; // Transición suave
+  pointer-events: none; // No interfiere con los clicks
+
   z-index: 1;
-}
-
-.btn-primary-background:hover {
-  border-radius: 10px;
-  background: #ffc165;
-  filter: blur(2px);
-}
-
-.btn-primary-background:active {
-  border-radius: 10px;
-  background: #ffcb53;
-  filter: blur(2px);
 }
 
 /* Pantallas ultra anchas (1601px+) */

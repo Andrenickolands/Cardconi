@@ -1,26 +1,22 @@
 <ion-content class="login-page">
   <div class="custom-background ">
     <div class="custom-background-dark">
+
       <div class="fields-container">
 
         <!-- Título o nombre de la app -->
-        <div class="name-app">
-          <h2>Cardconi</h2>
-        </div>
+        <h2 class="name-app">Cardconi</h2>
 
-        <!-- Campo de email -->
-        <div class="input email-input">
-          <ion-item class="custom-input" lines="none">
-            <ion-icon class="icon" name="mail-outline" slot="start"></ion-icon>
-            <ion-input type="email" placeholder="Escribe tu correo" [(ngModel)]="email" required>
-            </ion-input>
+        <div class="container-input">
+          <!-- Campo de email -->
+          <ion-item class="input" lines="none" name="email-input">
+            <img class="icon" src="../../../../assets/media/login/email-outline.svg" name="email-outline"/>
+            <ion-input type="email" placeholder="Escribe tu correo" [(ngModel)]="email" required></ion-input>
           </ion-item>
-        </div>
 
-        <!-- Campo de contraseña -->
-        <div class="input password-input">
-          <ion-item class="custom-input" lines="none">
-            <ion-icon class="icon" name="key-outline" slot="start"></ion-icon>
+          <!-- Campo de contraseña -->
+          <ion-item class="input" lines="none" name="password-input">
+            <img class="icon" src="../../../../assets/media/login/key-outline.svg" name="key-outline"/>
             <ion-input [type]="showPassword ? 'text' : 'password'" placeholder="Escribe tu contraseña"
               [(ngModel)]="password" required>
             </ion-input>
@@ -30,22 +26,23 @@
           </ion-item>
         </div>
 
+        <div class="container-button">
+          <div class="login-button" (click)="login()">
+            <app-btn-primary-login></app-btn-primary-login>
+          </div>
 
-        <div class="login-button" (click)="login()">
-          <app-btn-primary-login></app-btn-primary-login>
-        </div>
+          <div class="forget-password">
+            <a href="#">Olvidaste tu contraseña</a>
+          </div>
 
-        <div class="forget-password">
-          <a href="#">¿Olvidaste tu contraseña?</a>
-        </div>
-
-        <div class="register-button" (click)="goToRegister()">
-          <app-btn-secundary-login></app-btn-secundary-login>
+          <div class="register-button" (click)="goToRegister()">
+            <app-btn-secundary-login></app-btn-secundary-login>
+          </div>
         </div>
 
         <div class="icons-buttons">
           <img src="../../../../assets/media/generalIcons/google_icon.png" alt="Google" />
-          <img src="../../../../assets/media/generalIcons/face_icon.png" alt="Facebook" />
+          <img src="../../../../assets/media/generalIcons/facebook_icon.png" alt="Facebook" />
           <img src="../../../../assets/media/generalIcons/apple_icon.png" alt="Apple" />
         </div>
 

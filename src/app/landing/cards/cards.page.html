@@ -48,10 +48,8 @@
             </ion-item>
 
             <!-- Botón agregar al carrito -->
-            <ion-button expand="block" (click)="addToCart(product)" class="add-to-cart-btn">
-              <ion-icon slot="start"></ion-icon>
-              Agregar al carrito
-            </ion-button>
+            <app-btn-primary class="add-to-cart-btn" (click)="addToCart(product)"></app-btn-primary>
+
           </ion-card-content>
         </div>
       </ion-card>
