@@ -1,0 +1,64 @@
+<ion-content >
+
+  <!-- Imagen principal -->
+  <div class="grid-container">
+    <div class="product-image">
+      <img [src]="selectedImage" alt="Tarjeta seleccionada" />
+    </div>
+
+    <!-- Botones de colores -->
+    <div class="color-options">
+      <!-- Acordeones -->
+      <div class="product-descrip">
+        <p>{{product.name}}</p>
+        <p>{{product.price}}</p>
+        <p>{{product.copy}}</p>
+      </div>
+      <div class="options_container">
+        <ion-accordion-group expand="inset">
+          <ion-accordion value="descripcion">
+            <ion-item slot="header" color="light">
+              <ion-label>Descripción</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">
+              <p>{{ product.description }}</p>
+            </div>
+          </ion-accordion>
+
+          <ion-accordion value="materiales">
+            <ion-item slot="header" color="light">
+              <ion-label>Materiales</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">
+              <p>{{ product.materials }}</p>
+            </div>
+          </ion-accordion>
+
+          <ion-accordion value="terminos">
+            <ion-item slot="header" color="light">
+              <ion-label>Términos</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">
+              <p>{{ product.terms }}</p>
+            </div>
+          </ion-accordion>
+        </ion-accordion-group>
+      </div>
+      <h3 class="title_colors">Colores disponibles</h3>
+      <div class="color-selector">
+        
+        <div class="image-options">
+          <div *ngFor="let option of colorOptions" class="color-thumb"
+            [ngClass]="{ selected: selectedColor === option.color }" (click)="changeColor(option)"
+            [title]="option.name">
+            <img [src]="option.thumb" />
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</ion-content>

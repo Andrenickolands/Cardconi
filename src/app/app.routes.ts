@@ -88,6 +88,10 @@ export const routes: Routes = [
     loadComponent: () => import('./error-pages/expirate-sesion/expirate-sesion.page').then( m => m.ExpirateSesionPage)
   },
   {
+    path: 'product-detail',
+    loadComponent: () => import('./landing/product-detail/product-detail.page').then( m => m.ProductDetailPage)
+  },
+  {
     path: '**',
     redirectTo: '/404'
   },
@@ -95,4 +99,6 @@ export const routes: Routes = [
     path: 'btn-see-more',
     loadComponent: () => import('./components/btns/btn-see-more/btn-see-more.page').then( m => m.BtnSeeMorePage)
   },
+  
+
 ];

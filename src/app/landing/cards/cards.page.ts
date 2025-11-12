@@ -52,12 +52,18 @@ export class CardsPage implements OnInit {
   products: Product[] = [
     {
       id: '1',
-      name: 'Premium Golden Card',
-      description: 'Su acabado en baño de oro de alta calidad refleja tu estilo único y resalta tu estatus en cada transacción. Más que una tarjeta, es un símbolo de éxito y sofisticación, creada para quienes valoran los detalles y buscan marcar la diferencia',
-      price: 1450000,
-      image: '../../../../assets/media/cards/golden_card.png',
-      availableColors: ['Golden', 'Plateado', 'Tornasol', 'Negro Mate'],
-      stock: 50
+    name: 'Premium Golden Card',
+    description: 'Su acabado en baño de oro de alta calidad refleja tu estilo único...',
+    price: 145000,
+    image: '../../../../assets/media/cards/golden_card.png',
+    imagesByColor: {
+      'Golden': '../../../../assets/media/cards/golden_card.png',
+      'Plateado': '../../../../assets/media/cards/silver_card.png',
+      'Tornasol': '../../../../assets/media/cards/tornasol_card.png',
+      'Negro Mate': '../../../../assets/media/cards/mate_black_card.png'
+    },
+    availableColors: ['Golden', 'Plateado', 'Tornasol', 'Negro Mate'],
+    stock: 50
     },
     {
       id: '2',
@@ -78,6 +84,13 @@ export class CardsPage implements OnInit {
       stock: 20
     }
   ];
+
+  onColorChange(product: Product, color: string): void {
+  const newImage = product.imagesByColor?.[color];
+  if (newImage) {
+    product.image = newImage;
+  }
+}
 
   // Objeto para mantener la cantidad seleccionada de cada producto
   selectedQuantities: { [productId: string]: number } = {};
@@ -165,5 +178,8 @@ export class CardsPage implements OnInit {
 
   async goToCart(){
     this.router.navigate(['/cart']);
+  }
+    goToDetail() {
+    this.router.navigate(['/product-detail']);
   }
 }

@@ -8,6 +8,7 @@ export interface Product {
   image: string;
   availableColors: string[];
   stock: number;
+   imagesByColor?: { [color: string]: string };
 }
 
 export interface CartItem {
@@ -22,6 +23,8 @@ export interface CartSummary {
   totalPrice: number;
   items: CartItem[];
 }
+
+
 
 @Injectable({
   providedIn: 'root'

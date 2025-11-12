@@ -36,9 +36,9 @@
 
     <!-- Grid de productos -->
     <div class="products-container">
-      <ion-card *ngFor="let product of products" class="product-card">
+      <ion-card *ngFor="let product of products"  class="product-card">
         <!-- Imagen del producto -->
-        <img [src]="product.image" [alt]="product.name" class="product-image" />
+        <img [src]="product.image" [alt]="product.name" class="product-image" (click)="goToDetail()"  />
 
         <div class="content-text-card">
           <ion-card-content>
@@ -73,7 +73,8 @@
             <div class="container-select-color">
               <ion-item lines="none" class="select-color">
                 <ion-label>Seleccionar color</ion-label>
-                <ion-select [(ngModel)]="selectedColors[product.id]" interface="popover" placeholder="Elige un color">
+                <ion-select [(ngModel)]="selectedColors[product.id]" interface="popover" placeholder="Elige un color"
+                  (ionChange)="onColorChange(product, $event.detail.value)">
                   <ion-select-option *ngFor="let color of product.availableColors" [value]="color">
                     {{ color }}
                   </ion-select-option>
