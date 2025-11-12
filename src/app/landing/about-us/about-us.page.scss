@@ -1,0 +1,59 @@
+.fila {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: row;
+
+  padding: 1rem 8rem 0 8rem;
+
+  gap: 20px;
+
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container-text {
+  flex: 1;
+  flex: 0 0 50%;
+  width: 50%;
+}
+
+.container-ilustration {
+  flex: 1;
+  flex: 0 0 50%;
+  width: 50%;
+  width: 400px;
+  height: 200px;
+}
+
+.Ttile-about-us {
+  color: var(--text-color, #2f2f2f);
+  font-family: "Markazi Text";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+p {
+  color: var(--text-soft-color, #818181);
+  font-family: "Work Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.96px;
+}
+
+.margin-top {
+    margin-top: 4rem;
+}
+
+.margin-top-2 {
+    margin-top: 2rem;
+}
+
+.margin-bottom {
+    margin-bottom: 8rem;
+}
