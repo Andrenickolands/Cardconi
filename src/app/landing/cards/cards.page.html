@@ -8,14 +8,23 @@
         <div class="container-btn-type-card">
           <div class="container-btn-terciary">
             <button class="btn-terciary">Bancaría</button>
+            <div class="shape-left"></div>
+            <div class="shape-right"></div>
+            <div class="shape-down"></div>
           </div>
 
           <div class="container-btn-terciary">
             <button class="btn-terciary">Presentación</button>
+            <div class="shape-left"></div>
+            <div class="shape-right"></div>
+            <div class="shape-down"></div>
           </div>
 
           <div class="container-btn-terciary">
             <button class="btn-terciary">Personalizada</button>
+            <div class="shape-left"></div>
+            <div class="shape-right"></div>
+            <div class="shape-down"></div>
           </div>
         </div>
 
@@ -23,6 +32,8 @@
           <button class="btn-cart" name="cart-btn" (click)="goToCart()">
             <img class="icon" src="../../../../assets/media/cards/cart_duotone.svg" name="cart-icon" />
           </button>
+          <div class="shape-left-cart"></div>
+          <div class="shape-right-cart"></div>
           <!-- <div class="container-number-cart"><span class="number-cart">0</span></div> -->
         </div>
 
@@ -35,9 +46,9 @@
 
     <!-- Grid de productos -->
     <div class="products-container">
-      <ion-card *ngFor="let product of products"  class="product-card">
+      <ion-card *ngFor="let product of products" class="product-card">
         <!-- Imagen del producto -->
-        <img [src]="product.image" [alt]="product.name" class="product-image" (click)="goToDetail()"  />
+        <img [src]="product.image" [alt]="product.name" class="product-image" (click)="goToDetail()" />
 
         <div class="content-text-card">
           <ion-card-content>

@@ -1,58 +1,151 @@
-.container-btn-type-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 2.8rem;
-  flex-shrink: 0;
+.container-btns-superiores {
+  margin-top: 2.6rem;
+  width: 100%;
+  padding: 0 132px;
 
-  .container-btn-terciary {
-    width: 240px;
-    height: auto;
-    flex-shrink: 0;
+  .container-principal-btns {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 
-    .btn-terciary {
-      width: 100%;
-      height: 46px;
-      flex: 1;
+    .container-btn-type-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 2.8rem;
+      flex-shrink: 0;
 
-      border-radius: 12px;
-      border: 1.7px solid rgba(232, 232, 232, 0.4);
-      background: linear-gradient(
-        110deg,
-        rgba(255, 255, 255, 0.36) 0.2%,
-        rgba(217, 217, 217, 0.12) 101.11%
-      );
-      box-shadow: 23px 23px 34px 0 rgba(0, 0, 0, 0.05);
-      backdrop-filter: blur(26px);
+      .container-btn-terciary {
+        position: relative;
 
-      color: var(--text-color, #2f2f2f);
-      text-align: center;
-      font-family: "Markazi Text";
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      text-transform: capitalize;
-
-      &:hover {
-        transform: scale(1.02);
+        width: 240px;
+        height: auto;
+        flex-shrink: 0;
         border-radius: 12px;
-        background: radial-gradient(
-          77.98% 110.3% at 17.62% 34.98%,
-          rgba(250, 235, 215, 0.4) 0%,
-          rgba(148, 139, 127, 0.4) 100%
-        );
-      }
 
-      &:active {
-        transform: scale(0.99);
-        background: radial-gradient(
-          77.98% 110.3% at 17.62% 34.98%,
-          rgba(250, 235, 215, 0.7) 0%,
-          rgba(148, 139, 127, 0.7) 100%
-        );
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-touch-callout: none; /* iOS Safari */
+        pointer-events: auto;
+
+        overflow: hidden;
+
+        .btn-terciary {
+          width: 100%;
+          height: 46px;
+          flex: 1;
+
+          border-radius: 12px;
+          border: 1.7px solid rgba(232, 232, 232, 0.4);
+          background: linear-gradient(
+            110deg,
+            rgba(255, 255, 255, 0.36) 0.2%,
+            rgba(217, 217, 217, 0.12) 101.11%
+          );
+          box-shadow: 23px 23px 34px 0 rgba(0, 0, 0, 0.05);
+          backdrop-filter: blur(26px);
+
+          color: var(--text-color, #2f2f2f);
+          text-align: center;
+          font-family: "Markazi Text";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: capitalize;
+
+          z-index: 2;
+
+          &:hover {
+            transform: scale(1.02);
+            border-radius: 12px;
+            background: radial-gradient(
+              77.98% 110.3% at 17.62% 34.98%,
+              rgba(250, 235, 215, 0.4) 0%,
+              rgba(148, 139, 127, 0.4) 100%
+            );
+          }
+
+          &:active {
+            transform: scale(0.99);
+            background: radial-gradient(
+              77.98% 110.3% at 17.62% 34.98%,
+              rgba(250, 235, 215, 0.7) 0%,
+              rgba(148, 139, 127, 0.7) 100%
+            );
+          }
+        }
+
+        .shape-left {
+          position: absolute;
+
+          width: 24px;
+          height: 30px;
+          flex-shrink: 0;
+
+          top: 40%;
+          right: 50%;
+          left: 10%;
+          transform: translate(-50%, -50%);
+
+          border-radius: 2px;
+          background: #b3b3b3;
+          filter: blur(24px);
+
+          transition: background 0.3s ease; // Transición suave
+          pointer-events: none; // No interfiere con los clicks
+
+          z-index: 0;
+        }
+        .shape-right {
+          position: absolute;
+
+          width: 24px;
+          height: 30px;
+          flex-shrink: 0;
+
+          top: 40%;
+          right: -4%;
+          transform: translate(-50%, -50%);
+
+          border-radius: 2px;
+          background: #b3b3b3;
+          filter: blur(24px);
+
+          transition: background 0.3s ease; // Transición suave
+          pointer-events: none; // No interfiere con los clicks
+
+          z-index: 0;
+        }
+        .shape-down {
+          position: absolute;
+
+          width: 129px;
+          height: 4px;
+          flex-shrink: 0;
+
+          top: 86%;
+          right: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          border-radius: 2px;
+          background: #b3b3b3;
+          filter: blur(24px);
+
+          transition: background 0.3s ease; // Transición suave
+          pointer-events: none; // No interfiere con los clicks
+
+          z-index: 0;
+        }
       }
     }
+  }
+  .container-filter {
   }
 }
