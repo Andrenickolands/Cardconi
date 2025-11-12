@@ -16,7 +16,7 @@ import { BtnFloatingPage } from 'src/app/components/btns/btn-floating/btn-floati
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonContent, CommonModule, FormsModule, HeaderLandingPage, BtnCtaPage, FooterLandingPage, BtnCartPage, IonAccordion, ReviewCardPage, BtnPrimaryLoginPage, BtnFloatingPage]
+  imports: [IonContent, CommonModule, FormsModule, HeaderLandingPage, BtnCtaPage, FooterLandingPage, ReviewCardPage, BtnFloatingPage]
 })
 export class HomePage implements OnInit {
   scrollProgress: number = 0;
