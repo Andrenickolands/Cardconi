@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonHeader, IonTitle, IonToolbar, IonButton, IonIcon, IonItem, IonList, IonBackButton, MenuController } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonButton, MenuController } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { AuthService, Usuario } from 'src/app/services/auth.service';
@@ -11,7 +11,7 @@ import { AuthService, Usuario } from 'src/app/services/auth.service';
   templateUrl: './header-landing.page.html',
   styleUrls: ['./header-landing.page.scss'],
   standalone: true,
-  imports: [IonBackButton, IonList, IonItem, IonButton, IonIcon, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonButton, IonHeader, IonToolbar, CommonModule, FormsModule]
 })
 export class HeaderLandingPage implements OnInit {
 
@@ -75,6 +75,7 @@ export class HeaderLandingPage implements OnInit {
 
   goToLogin() { this.router.navigate(['/login']); }
   goToRegister() { this.router.navigate(['/sign-up']); }
+  goToHome() { this.router.navigate(['/splash']); }
 
   openWhatsApp(): void {
     const encodedMessage = encodeURIComponent(this.message);

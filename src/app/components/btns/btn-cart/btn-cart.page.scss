@@ -1,79 +1,70 @@
 .container-btn-cart {
+  position: relative;
   width: 80px;
-  height: 46px;
-  flex-shrink: 0;
-}
-
-.btn-cart {
-  border-radius: 14px;
-  border: 1.699px solid rgba(232, 232, 232, 0.4);
-  background: linear-gradient(
-    110deg,
-    rgba(255, 255, 255, 0.36) 0.2%,
-    rgba(217, 217, 217, 0.12) 101.11%
-  );
-  box-shadow: 22.97px 22.97px 33.981px 0 rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(25.486021041870117px);
-}
-
-.btn-cart:active {
-  border-radius: 12px;
-  background: radial-gradient(
-    77.98% 110.3% at 17.62% 34.98%,
-    rgba(250, 235, 215, 0.4) 0%,
-    rgba(148, 139, 127, 0.4) 100%
-  );
-}
-
-.number-cart::before {
-  width: 20px;
-  height: 20px;
+  height: auto;
   flex-shrink: 0;
 
-  fill: #FBD297;
+  .btn-cart {
+    width: 100%;
+    height: 46px;
+    flex: 1;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    border-radius: 14px;
+    border: 1.7px solid rgba(232, 232, 232, 0.4);
+    background: linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0.36) 0.2%,
+      rgba(217, 217, 217, 0.12) 101.11%
+    );
+    box-shadow: 23px 23px 34px 0 rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(26px);
+    transition: all 0.2s ease;
 
-  color: var(--text-color);
-  text-align: center;
-  font-family: "Work Sans";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.56px;
-}
+    &:hover {
+      transform: scale(1.04);
+      background: radial-gradient(
+        77.98% 110.3% at 17.62% 34.98%,
+        rgba(250, 235, 215, 0.4) 0%,
+        rgba(148, 139, 127, 0.4) 100%
+      );
+    }
 
-/* Pantallas ultra anchas (1601px+) */
-@media (min-width: 1601px) {
-}
+    &:active {
+      transform: scale(0.99);
+      border-radius: 12px;
+      background: radial-gradient(
+        77.98% 110.3% at 17.62% 34.98%,
+        rgba(250, 235, 215, 0.7) 0%,
+        rgba(148, 139, 127, 0.7) 100%
+      );
+    }
+  }
 
-/* Desktop grande (1201px - 1600px) */
-@media (min-width: 1201px) and (max-width: 1600px) {
-}
+  .container-number-cart {
+    position: absolute;
+    top: -4px;
+    right: -4px;
 
-/* Desktop pequeño (1025px - 1200px) */
-@media (min-width: 1025px) and (max-width: 1200px) {
-}
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border-radius: 100%;
 
-/* Para dispositivos táctiles - eliminar hover en móviles */
-@media (hover: none) and (pointer: coarse) {
-}
+    background-color: var(--secundary-color);
 
-/* Tablet (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-/* Mobile mediano (480px - 768px) */
-@media (min-width: 480px) and (max-width: 768px) {
-}
-
-/* Mobile pequeño (360px - 479px) */
-@media (min-width: 360px) and (max-width: 479px) {
-}
-
-/* Mobile extra pequeño (320px - 359px) */
-@media (max-width: 359px) {
+    .number-cart::before {
+      color: var(--text-color);
+      text-align: center;
+      font-family: "Work Sans";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.56px;
+    }
+  }
 }

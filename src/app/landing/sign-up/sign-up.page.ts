@@ -32,9 +32,9 @@ interface Country {
   styleUrls: ['./sign-up.page.scss'],
   standalone: true,
   imports: [
-    IonItem, IonButton, IonContent, IonHeader, IonTitle, IonToolbar,
+    IonItem, IonButton, IonContent,
     CommonModule, FormsModule, IonIcon, IonInput, ReactiveFormsModule,
-    IonLabel, IonCardContent, IonCheckbox
+    IonCheckbox
   ]
 })
 export class SignUpPage implements OnInit {

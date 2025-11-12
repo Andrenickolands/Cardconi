@@ -12,7 +12,7 @@ import { AuthService, Usuario } from 'src/app/services/auth.service';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonContent, IonItem, IonInput, IonButton, IonIcon, CommonModule, FormsModule, BtnPrimaryLoginPage, BtnSecundaryLoginPage]
+  imports: [IonContent, IonItem, IonInput, IonIcon, CommonModule, FormsModule, BtnPrimaryLoginPage, BtnSecundaryLoginPage]
 })
 export class LoginPage implements OnInit {
 
@@ -20,13 +20,37 @@ export class LoginPage implements OnInit {
   password: string = '';
   showPassword: boolean = false;
 
+  isEmailFocused: boolean = false;
+  emailError: string = '';
+
   constructor(
     private toastController: ToastController,
     private router: Router,
     private authService: AuthService
-  ) {}
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  onEmailBlur() {
+    this.isEmailFocused = false;
+    this.validateEmail();
+  }
+
+  validateEmail() {
+    if (!this.email) {
+      this.emailError = 'El correo electrónico es requerido';
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(this.email)) {
+      this.emailError = 'Ingresa un correo electrónico válido';
+      return false;
+    }
+
+    this.emailError = '';
+    return true;
+  }
 
   togglePassword() {
     this.showPassword = !this.showPassword;

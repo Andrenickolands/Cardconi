@@ -1,4 +1,6 @@
 <div class="container-btn-cart">
-  <ion-button class="btn-cart" name="cart" slot="icon-only"></ion-button> 
-  <span class="number-cart">{{ counter }}</span>
+  <button class="btn-cart" name="cart-btn" (click)="goToCart()">
+    <img class="icon" src="../../../../assets/media/cards/cart_duotone.svg" name="cart-icon" />
+  </button>
+  <div class="container-number-cart"><span class="number-cart">0</span></div>
 </div>
