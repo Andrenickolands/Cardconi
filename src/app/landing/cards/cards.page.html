@@ -82,7 +82,7 @@
             <!-- Selector de color -->
             <div class="container-select-color">
               <ion-item lines="none" class="select-color">
-                <ion-label>Seleccionar color</ion-label>
+                <ion-label>TIPO</ion-label>
                 <ion-select [(ngModel)]="selectedColors[product.id]" interface="popover" placeholder="Elige un color"
                   (ionChange)="onColorChange(product, $event.detail.value)">
                   <ion-select-option *ngFor="let color of product.availableColors" [value]="color">

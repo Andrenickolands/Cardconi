@@ -62,20 +62,30 @@ export class CardsPage implements OnInit {
     },
     {
       id: '2',
-      name: 'Producto 2',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      price: 49.99,
-      image: 'https://via.placeholder.com/300x200',
-      availableColors: ['Blanco', 'Gris', 'Amarillo'],
+      name: 'Formula 1 premium cards',
+      description: 'Experimenta la adrenalina de la Fórmula 1 en cada compra. Nuestras tarjetas de crédito F1 combinan diseño exclusivo, tecnología de punta y beneficios de élite para quienes viven acelerando hacia sus metas.',
+      price: 189997,
+      image: '../../../../assets/media/cards/maclaren_card.png',
+      imagesByColor: {
+        'Maclaren': '../../../../assets/media/cards/maclaren_card.png',
+        'Ferrari': '../../../../assets/media/cards/ferrari_card.png',
+        'Redbull': '../../../../assets/media/cards/redbull_card.png'
+      },
+      availableColors: ['Maclaren', 'Ferrari', 'Redbull'],
       stock: 30
     },
     {
       id: '3',
-      name: 'Producto 3',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      price: 19.99,
-      image: 'https://via.placeholder.com/300x200',
-      availableColors: ['Rosa', 'Morado', 'Celeste'],
+      name: 'Artistic cards',
+      description: 'Cada tarjeta es una obra maestra en tus manos. Inspiradas en la creatividad y la expresión artística, nuestras tarjetas combinan diseño, exclusividad y significado, convirtiendo cada transacción en un gesto de identidad.',
+      price: 89997,
+      image: '../../../../assets/media/cards/totem_card.png',
+      imagesByColor: {
+        'Totem': '../../../../assets/media/cards/totem_card.png',
+        'Precolombino': '../../../../assets/media/cards/precolombina_card.png',
+        'Monserrate': '../../../../assets/media/cards/church.png'
+      },
+      availableColors: ['Totem', 'Precolombino', 'Monserrate'],
       stock: 20
     }
   ];
@@ -174,7 +184,7 @@ export class CardsPage implements OnInit {
   async goToCart() {
     this.router.navigate(['/cart']);
   }
-  
+
   goToDetail() {
     this.router.navigate(['/product-detail']);
   }
