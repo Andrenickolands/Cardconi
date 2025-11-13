@@ -14,53 +14,36 @@
     <p>Agrega productos para comenzar tu compra</p>
   </div>
 
-  <!-- Items del carrito -->
+  <!-- Carrito con items -->
   <div *ngIf="cartItems.length > 0" class="cart-container">
-    
     <!-- Lista de productos -->
     <ion-list class="cart-items">
       <ion-item *ngFor="let item of cartItems" class="cart-item">
-        
-        <!-- Imagen del producto -->
         <img [src]="item.product.image" [alt]="item.product.name" class="item-image" />
-        
+
         <div class="item-details">
-          <!-- Información del producto -->
           <div class="item-info">
             <h3>{{ item.product.name }}</h3>
             <p class="item-color">Color: {{ item.selectedColor }}</p>
             <p class="item-price">${{ item.product.price | number:'1.2-2' }}</p>
           </div>
 
-          <!-- Controles de cantidad -->
           <div class="item-controls">
             <div class="quantity-control">
-              <ion-button 
-                fill="clear" 
-                size="small"
-                (click)="decreaseQuantity(item)">
+              <ion-button fill="clear" size="small" (click)="decreaseQuantity(item)">
                 <ion-icon slot="icon-only" name="remove"></ion-icon>
               </ion-button>
-              
+
               <span class="quantity">{{ item.quantity }}</span>
-              
-              <ion-button 
-                fill="clear" 
-                size="small"
-                (click)="increaseQuantity(item)">
+
+              <ion-button fill="clear" size="small" (click)="increaseQuantity(item)">
                 <ion-icon slot="icon-only" name="add"></ion-icon>
               </ion-button>
             </div>
 
-            <!-- Subtotal -->
             <p class="item-subtotal">${{ item.subtotal | number:'1.2-2' }}</p>
 
-            <!-- Botón eliminar -->
-            <ion-button 
-              fill="clear" 
-              color="danger"
-              size="small"
-              (click)="removeItem(item)">
+            <ion-button fill="clear" color="danger" size="small" (click)="removeItem(item)">
               <ion-icon slot="icon-only" name="trash"></ion-icon>
             </ion-button>
           </div>
@@ -68,11 +51,11 @@
       </ion-item>
     </ion-list>
 
-    <!-- Resumen del carrito -->
+    <!-- Resumen -->
     <ion-card class="cart-summary">
       <ion-card-content>
         <h2>Resumen del Pedido</h2>
-        
+
         <div class="summary-row">
           <span>Productos ({{ cartSummary.totalItems }})</span>
           <span>${{ cartSummary.totalPrice | number:'1.2-2' }}</span>
@@ -90,22 +73,83 @@
           <span>${{ cartSummary.totalPrice | number:'1.2-2' }}</span>
         </div>
 
-        <!-- Botones de acción -->
-        <ion-button 
-          expand="block" 
-          (click)="checkout()"
-          class="checkout-btn">
+        <!-- Botones -->
+        <ion-button expand="block" class="checkout-btn" (click)="openFormModal()">
           Procesar Pedido
         </ion-button>
 
-        <ion-button 
-          expand="block" 
-          fill="outline"
-          color="danger"
-          (click)="clearCart()">
+        <ion-button expand="block" fill="outline" color="danger" (click)="clearCart()">
           Vaciar Carrito
         </ion-button>
       </ion-card-content>
     </ion-card>
   </div>
+
+  <!-- 🪄 MODAL ELEGANTE DE DATOS DE ENVÍO -->
+  <ion-modal [isOpen]="showFormModal" (didDismiss)="closeFormModal()" class="animated-modal">
+    <ng-template>
+      <ion-content class="payment-modal">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Datos de envío</ion-card-title>
+            <ion-card-subtitle>Completa tu información antes del pago</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <form (ngSubmit)="submitCheckout()" #formEnvio="ngForm">
+
+              <ion-item>
+                <ion-label position="floating">Nombre completo</ion-label>
+                <ion-input type="text" [(ngModel)]="formData.name" name="name" required></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Correo electrónico</ion-label>
+                <ion-input type="email" [(ngModel)]="formData.email" name="email" required></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Dirección</ion-label>
+                <ion-input type="text" [(ngModel)]="formData.address" name="address" required></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Código postal</ion-label>
+                <ion-input type="text" [(ngModel)]="formData.postalCode" name="postalCode" required></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Casa o apartamento</ion-label>
+                <ion-input type="text" [(ngModel)]="formData.apartment" name="apartment"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Barrio</ion-label>
+                <ion-input type="text" [(ngModel)]="formData.neighborhood" name="neighborhood"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Ciudad</ion-label>
+                <ion-input type="text" [(ngModel)]="formData.city" name="city" required></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Teléfono</ion-label>
+                <ion-input type="tel" [(ngModel)]="formData.phone" name="phone" required></ion-input>
+              </ion-item>
+
+              <div class="modal-buttons">
+                <ion-button expand="block" color="success" type="submit">
+                  Continuar con el pago
+                </ion-button>
+                <ion-button expand="block" color="medium" (click)="closeFormModal()">
+                  Cancelar
+                </ion-button>
+              </div>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>
