@@ -6,7 +6,8 @@ import { Product } from 'src/app/services/cart.service';
 import { CartService } from 'src/app/services/cart.service';
 import { addIcons } from 'ionicons';
 import { add, remove, cart } from 'ionicons/icons';
-import { IonContent, IonHeader, IonTitle, IonCard, IonToolbar,
+import {
+  IonContent, IonHeader, IonTitle, IonCard, IonToolbar,
   IonCardContent,
   IonCardHeader,
   IonCardTitle,
@@ -28,7 +29,7 @@ import { Router } from '@angular/router';
   templateUrl: './cards.page.html',
   styleUrls: ['./cards.page.scss'],
   standalone: true,
-  imports: [IonContent, 
+  imports: [IonContent,
     IonCard,
     HeaderLandingPage,
     IonCardContent,
@@ -37,7 +38,7 @@ import { Router } from '@angular/router';
     IonSelectOption,
     IonLabel,
     IonItem,
-    CommonModule, 
+    CommonModule,
     FormsModule, BtnPrimaryPage, BtnSeeMorePage]
 })
 export class CardsPage implements OnInit {
@@ -46,18 +47,18 @@ export class CardsPage implements OnInit {
   products: Product[] = [
     {
       id: '1',
-    name: 'Premium Golden Card',
-    description: 'Su acabado en baño de oro de alta calidad refleja tu estilo único...',
-    price: 145000,
-    image: '../../../../assets/media/cards/golden_card.png',
-    imagesByColor: {
-      'Golden': '../../../../assets/media/cards/golden_card.png',
-      'Plateado': '../../../../assets/media/cards/silver_card.png',
-      'Tornasol': '../../../../assets/media/cards/tornasol_card.png',
-      'Negro Mate': '../../../../assets/media/cards/mate_black_card.png'
-    },
-    availableColors: ['Golden', 'Plateado', 'Tornasol', 'Negro Mate'],
-    stock: 50
+      name: 'Premium Golden Card',
+      description: 'Su acabado en baño de oro de alta calidad refleja tu estilo único...',
+      price: 145000,
+      image: '../../../../assets/media/cards/golden_card.png',
+      imagesByColor: {
+        'Golden': '../../../../assets/media/cards/golden_card.png',
+        'Plateado': '../../../../assets/media/cards/silver_card.png',
+        'Tornasol': '../../../../assets/media/cards/tornasol_card.png',
+        'Negro Mate': '../../../../assets/media/cards/mate_black_card.png'
+      },
+      availableColors: ['Golden', 'Plateado', 'Tornasol', 'Negro Mate'],
+      stock: 50
     },
     {
       id: '2',
@@ -80,15 +81,15 @@ export class CardsPage implements OnInit {
   ];
 
   onColorChange(product: Product, color: string): void {
-  const newImage = product.imagesByColor?.[color];
-  if (newImage) {
-    product.image = newImage;
+    const newImage = product.imagesByColor?.[color];
+    if (newImage) {
+      product.image = newImage;
+    }
   }
-}
 
   // Objeto para mantener la cantidad seleccionada de cada producto
   selectedQuantities: { [productId: string]: number } = {};
-  
+
   // Objeto para mantener el color seleccionado de cada producto
   selectedColors: { [productId: string]: string } = {};
 
@@ -170,10 +171,11 @@ export class CardsPage implements OnInit {
     toast.present();
   }
 
-  async goToCart(){
+  async goToCart() {
     this.router.navigate(['/cart']);
   }
-    goToDetail() {
+  
+  goToDetail() {
     this.router.navigate(['/product-detail']);
   }
 }
